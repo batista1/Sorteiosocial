@@ -1,0 +1,17 @@
+<div layout="row" style="height:100%">
+    <md-sidenav class="md-whiteframe-z2" md-component-id="painelprincipal" md-is-locked-open="$mdMedia('gt-sm')">
+        <div ng-include="'template/menu.html?1'"></div>
+    </md-sidenav>
+    <div layout="column" flex>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button ng-click="buildToggler('painelprincipal')" class="navbar-toggle  md-icon-button" aria-label="btncasd">
+                    <md-icon md-svg-icon="menu"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-content layout="column" flex>
+            <ng-view ui-view="root" flex></ng-view>
+        </md-content>
+    </div>
+</div>

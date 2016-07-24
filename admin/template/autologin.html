@@ -1,0 +1,61 @@
+<div style="height:100%" layout="row" layout-align="center center">
+    <md-card flex-xs="95" flex-sm="80" flex-md="60" flex-lg="60">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>
+		          <span style="color:white">Acessar servidor</span>
+		        </h2>
+                <span flex></span>
+                <md-button class="md-icon-button" aria-label="More" ng-click="cancel()">
+                    <md-icon md-svg-icon="close">
+                        </i>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <form name="loginform" ng-submit="c()" layout-padding ng-hide="passhare">
+            <fieldset>
+                <legend>Informe os seus dados de acesso ao sistema</legend>
+                <div layout="row">
+                    <md-input-container class="md-block" flex>
+                        <input ng-model="data_login.host" type="text" placeholder="Socket" name="host" required>
+                        <div ng-messages="loginform.host.$error">
+                            <div ng-message="required">Informe o seu host.</div>
+                        </div>
+
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <input ng-model="data_login.port" type="number" placeholder="Porta" name="port" required>
+                        <div ng-messages="loginform.port.$error">
+                            <div ng-message="required">Informe a porta.</div>
+                        </div>
+                    </md-input-container>
+                </div>
+            </fieldset>
+            <div layout="row" layout-align="end center">
+                <md-progress-circular md-mode="indeterminate" ng-show="loginform.$submitted" md-diameter="20"></md-progress-circular>
+                <md-button type="submit" class="md-raised md-primary" ng-disabled="loginform.$invalid || loginform.$submitted">
+                    Conectar
+                </md-button>
+            </div>
+        </form>
+        <form name="passform" ng-submit="p()" layout-padding ng-show="passhare">
+            <fieldset>
+                <legend>Chave única</legend>
+                <div layout="row">
+                    <md-input-container class="md-block" flex>
+                        <input ng-model="data_login.pass" type="text" placeholder="Chave de acesso" name="pass" required>
+                        <div ng-messages="passform.pass.$error">
+                            <div ng-message="required">Informe a chave de acesso.</div>
+                        </div>
+                    </md-input-container>
+                </div>
+            </fieldset>
+            <div layout="row" layout-align="end center">
+                <md-progress-circular md-mode="indeterminate" ng-show="passform.$submitted" md-diameter="20"></md-progress-circular>
+                <md-button type="submit" class="md-raised md-primary" ng-disabled="passform.$invalid || passform.$submitted">
+                    Conectar
+                </md-button>
+            </div>
+        </form>
+    </md-card>
+</div>

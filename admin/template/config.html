@@ -1,0 +1,240 @@
+<md-tabs md-dynamic-height md-border-bottom>
+   <md-tab label="Informações">
+      <md-content class="md-padding">
+         <fieldset>
+            <legend>Dados do site</legend>
+            <form name="configInfo" ng-submit="fu()">
+               <md-input-container class="md-block">
+                  <label>Nome do site</label>
+                  <input ng-model="site.nome" name="nome" required/>
+                  <div ng-messages="configInfo.nome.$error">
+                     <div ng-message="required">Campo obrigatório</div>
+                  </div>
+               </md-input-container>
+               <md-input-container class="md-block">
+                  <label>Descrição</label>
+                  <textarea ng-model="site.desc" name="desc" required></textarea>
+                  <div ng-messages="configInfo.desc.$error">
+                     <div ng-message="required">Descrição obrigatória</div>
+                  </div>
+               </md-input-container>
+               <div layout-gt-sm="row">
+                  <md-input-container flex>
+                     <label>Moeda</label>
+                     <md-select ng-model="site.currency" >
+                        <md-option value="real">
+                           Real brasileiro
+                        </md-option>
+                     </md-select>
+                  </md-input-container>
+                  <md-input-container flex>
+                     <label>Idioma</label>
+                     <md-select ng-model="site.lang" >
+                        <md-option value="ptbr">
+                           Português (Brasil)
+                        </md-option>
+                     </md-select>
+                  </md-input-container>
+               </div>
+               <md-switch ng-model="site.maskcell" aria-label="Switch 1">
+                  Mascarar telefone de contato?
+               </md-switch>
+               <md-switch ng-model="site.emailconfirm" aria-label="Switch 1">
+                  Exigir confirmação por email?
+               </md-switch>
+               <md-switch ng-model="site.analizer" aria-label="Switch 1">
+                  Analizar publicações criadas?
+               </md-switch>
+            </form>
+         </fieldset>
+      </md-content>
+   </md-tab>
+   <md-tab label="API's">
+      <md-content class="md-padding">
+         <fieldset>
+            <legend>Autenticação de redes sociais</legend>
+            <form>
+               <div layout-gt-sm="row">
+                  <md-switch ng-model="api.facebook" aria-label="Switch 1" flex>
+                     Aceitar login via facebook?
+                  </md-switch>
+                  <md-input-container class="md-block" flex ng-show="api.facebook">
+                     <label>APP ID</label>
+                     <textarea ng-model="api.opfb.id" name="fbid"></textarea>
+                  </md-input-container>
+                  <md-input-container class="md-block" flex flex ng-show="api.facebook">
+                     <label>Secret Key</label>
+                     <textarea ng-model="api.opfb.secret" name="desc"></textarea>
+                  </md-input-container>
+               </div>
+               <p class="md-caption" ng-show="api.facebook">Clique aqui para acessar seu APP no facebook <a target="_blank" href="https://developers.facebook.com/apps/">https://developers.facebook.com/apps/</a></p>
+               <div layout-gt-sm="row">
+                  <md-switch ng-model="api.google" aria-label="Switch 1" flex>
+                     Aceitar login via Google+?
+                  </md-switch>
+                  <md-input-container class="md-block" flex ng-show="api.google">
+                     <label>Google ID</label>
+                     <textarea ng-model="api.opgo.id" name="desc"></textarea>
+                  </md-input-container>
+                  <md-input-container class="md-block" flex flex ng-show="api.google">
+                     <label>Secret Key</label>
+                     <textarea ng-model="api.opgo.secret" name="desc"></textarea>
+                  </md-input-container>
+               </div>
+               <p class="md-caption" ng-show="api.google">Clique aqui para acessar seu APP no facebook <a target="_blank" href="https://console.developers.google.com/project">https://console.developers.google.com/project</a></p>
+            </form>
+         </fieldset>
+         <fieldset>
+            <legend>Configuração de compartilhamento do facebook</legend>
+            <md-input-container class="md-block" flex flex>
+               <label>ID do Facebook</label>
+               <textarea ng-model="api.opfb.share"></textarea>                
+            </md-input-container>
+         </fieldset>
+         <fieldset>
+            <legend>Configuração do Google analytics</legend>
+            <md-input-container class="md-block" flex flex>
+               <label>ID do Analyticsk</label>
+               <textarea ng-model="api.analytics.id"></textarea>                
+            </md-input-container>
+         </fieldset>
+      </md-content>
+   </md-tab>
+   <md-tab label="Pagamentos">
+      <md-content class="md-padding">
+         <fieldset>
+            <legend>Configuração</legend>
+            <md-card>
+            <div layout-gt-sm="row">
+               <md-input-container class="md-block" flex>
+                  <label>Valor do plano</label>
+                  <textarea ng-model="payment.value" name="desc"></textarea>
+                  
+               </md-input-container>
+               <md-input-container class="md-block" flex>
+                  <label>Dias de validade</label>
+                  <textarea ng-model="payment.days" name="desc"></textarea>
+                  
+               </md-input-container>
+            </div>
+            </md-card>
+         </fieldset>
+         <fieldset>
+            <legend>Gerencianet</legend>
+            <div layout-gt-sm="row">
+               <md-input-container class="md-block" flex>
+                  <label>Client ID</label>
+                  <textarea ng-model="payment.id" name="desc"></textarea>
+                  
+               </md-input-container>
+               <md-input-container class="md-block" flex>
+                  <label>Secret ID</label>
+                  <textarea ng-model="payment.secret" name="desc"></textarea>
+                  
+               </md-input-container>
+            </div>
+            <p class="md-caption">Veja seus dados em <a target="_blank" href="https://docs.gerencianet.com.br/minhas-aplicacoes">https://docs.gerencianet.com.br/minhas-aplicacoes</a></p>
+         </fieldset>
+      </md-content>
+   </md-tab>
+   <md-tab label="Email">
+      <md-content class="md-padding">
+         <fieldset>
+            <legend>Configuração SMTP</legend>
+            <div layout-gt-sm="row">
+               <md-input-container flex>
+                  <label>Host</label>
+                  <input ng-model="smtp.host" />
+               </md-input-container>
+               <md-input-container flex>
+                  <label>Port</label>
+                  <input ng-model="smtp.port" />
+               </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+               <md-input-container flex>
+                  <label>User</label>
+                  <input ng-model="smtp.user" />
+               </md-input-container>
+               <md-input-container flex>
+                  <label>Pass</label>
+                  <input ng-model="smtp.pass" />
+               </md-input-container>
+            </div>
+         </fieldset>
+      </md-content>
+   </md-tab>
+   <md-tab label="Servidor">
+      <md-content class="md-padding">
+         <fieldset>
+            <legend>Armazenamento</legend>
+            <md-input-container class="md-block" flex>
+               <label>Configuração</label>
+               <md-select ng-model="server.storage.type" >
+                  <md-option value="real">
+                     XHR/PHP
+                  </md-option>
+               </md-select>
+            </md-input-container>
+            <md-input-container class="md-block" flex>
+               <label>URL do servidor</label>
+               <textarea ng-model="server.storage.host" name="desc"></textarea>
+               
+            </md-input-container>
+         </fieldset>
+         <fieldset>
+            <legend>Conexão</legend>
+            <md-input-container class="md-block" flex>
+               <label>Tipo de servidor</label>
+               <md-select ng-model="server.connection.type" >
+                  <md-option value="node">
+                     NodeJS
+                  </md-option>
+               </md-select>
+            </md-input-container>
+            <md-input-container class="md-block" flex>
+               <label>URL do servidor</label>
+               <textarea ng-model="server.connection.host" name="desc" required></textarea>
+               <div ng-messages="configInfo.desc.$error">
+                  <div ng-message="required">Informação obrigatória</div>
+               </div>
+            </md-input-container>
+         </fieldset>
+         <fieldset>
+            <legend>Banco de dados</legend>
+            <md-input-container class="md-block" flex>
+               <label>Tipo do DB</label>
+               <md-select ng-model="server.db.type" >
+                  <md-option value="real">
+                     MongoDB - NoSQL
+                  </md-option>
+               </md-select>
+            </md-input-container>
+            <md-input-container class="md-block" flex>
+               <label>URL do banco de dados</label>
+               <textarea ng-model="server.db.host" name="desc"></textarea>
+               
+            </md-input-container>
+            <md-input-container class="md-block" flex>
+               <label>Usuário</label>
+               <textarea ng-model="server.db.user" name="desc"></textarea>
+               
+            </md-input-container>
+
+            <md-input-container class="md-block" flex>
+               <label>Senha</label>
+               <textarea ng-model="server.db.pass" name="desc"></textarea>
+             
+            </md-input-container>
+            <md-input-container class="md-block" flex>
+               <label>Banco</label>
+               <textarea ng-model="server.db.collection" name="desc"></textarea>
+             
+            </md-input-container>
+         </fieldset>
+      </md-content>
+   </md-tab>
+</md-tabs>
+<div layout="row" layout-padding>
+   <md-button flex class="md-raised md-primary md-block" ng-click="save()">Salvar</md-button>
+</div>
