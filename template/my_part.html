@@ -1,0 +1,44 @@
+<style type="text/css">
+    .adverts {
+        height: 120px;
+    }
+    
+    .bgimage {
+        background-size: cover;
+        background-position: center center;
+        width: 200px;
+    }
+</style><div class="page-err" ng-show="cards.length==0">
+    <div class="err-container">
+        <div class="text-center">
+            <div class="err-status">
+                <h1 style="font-size: 90px;">Ooops!</h1>
+            </div>
+            <div class="err-message">
+                <h2 style="font-size: 30px;">Em breve teremos sorteios aqui para você participar.</h2>
+            </div>
+            <div class="err-body">
+                <a ui-sref="app.new_sort" class="btn btn-lg btn-goback">
+                    <span class="space"></span> Clique aqui para criar um
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div layout="column"  ng-show="cards.length!=0">
+<div  ng-repeat="c in cards">
+<md-card layout="row" >
+    <div ng-style="{'background-image': 'url('+ c._id.output.display_src + ')'}" class="bgimage"></div> 
+    <div flex="70" layout-padding>
+        <p class="md-title" style="font-weight: 500; text-transform: uppercase; font: 500 16px/22px 'Roboto',sans-serif;">{{c._id.data.titulo}}</p>
+        <div layout="row">
+            <div layout="column">
+                <span class="md-caption"><md-icon md-svg-icon="calendar"></md-icon>Encerramento: {{c._id.data.data | date:'dd/MM/yy'}}</span>
+                <span class="md-caption"><md-icon md-svg-icon="account"></md-icon>Anunciante: <b>@{{c._id.output.owner.username}}</b> </span>
+                <span class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Seus tickets: {{c.count}} </span>
+            </div>
+        </div>
+    </div>
+</md-card>
+</div>
+</div>

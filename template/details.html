@@ -1,0 +1,114 @@
+<style type="text/css">
+    .product {
+        background: #fff none repeat scroll 0 0;
+        border-radius: 4px;
+        box-shadow: 0 34px 50px 20px rgba(0, 0, 0, 0.25);
+        position: relative;
+    }
+</style>
+<style type="text/css">
+    .adverts {
+        height: 120px;
+    }
+    
+    .bgimage {
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+    }
+    
+    .title {
+        font-size: 34px;
+        font-weight: 300;
+        color: 5E813A;
+    }
+    
+    md-list-item.md-2-line .md-avatar-icon,
+    md-list-item.md-2-line>._md-no-style .md-avatar-icon,
+    md-list-item.md-2-line>._md-no-style>.md-avatar,
+    md-list-item.md-2-line>.md-avatar {
+        margin-top: 8px;
+    }
+    
+    md-list-item ._md-list-item-inner .md-avatar,
+    md-list-item .md-avatar {
+        width: 36px;
+        height: 36px;
+    }
+    
+    table.md-table:not(.md-row-select) td.md-cell:first-child,
+    table.md-table:not(.md-row-select) th.md-column:first-child {
+        padding: 0px;
+    }
+</style>
+<style type="text/css">
+    md-list-item.md-2-line,
+    md-list-item.md-2-line>._md-no-style {
+        height: auto;
+        min-height: 41px;
+    }
+</style>
+<div layout="row" layout-align="center center">
+    <div flex layout="column">
+        <md-card class="product">
+            <div layout="column" layout-gt-sm="row">
+                <md-card layout="column" flex>
+                    <div ng-style="{'background-image': 'url('+ data.output.display_src + ')'}" class="bgimage" flex></div>
+                    <span class="title"></span>
+                    <p class="md-headline" style="font-weight: 500; color: #337ab7;">{{data.data.valor_compra | currency: 'R$ '}}</p>
+                </md-card>
+                <md-card flex>
+                    <md-toolbar class="md-table-toolbar md-primary">
+                        <div class="md-toolbar-tools">
+                            <h3 class="md-title" style="color:white">Complete as etapas abaixo para participar do sorteio</h3>
+                        </div>
+                    </md-toolbar>
+                    <p layout-padding>Clique nas opções abaixo para abrir um ticket. Você pode repetir quantas vezes quiser.</p>
+                    <md-list>
+                        <a href="https://instagram.com/p/{{data.output.code}}" target="_blank">
+                            <md-list-item ng-click="navigateTo('data usage', $event)">
+                                <md-icon md-svg-icon="instagram"></md-icon>
+                                <p>Marca amigo nos comentários</p>
+                            </md-list-item>
+                        </a>
+                    </md-list>
+                </md-card>
+            </div>
+            <div layout="column" layout-gt-sm="row" style="min-height:120px">
+                <md-card flex style="min-height:160px">
+                    <md-toolbar class="md-table-toolbar md-primary">
+                        <div class="md-toolbar-tools">
+                            <h2 class="md-title" style="color:white">{{data.data.titulo}}</h2>
+                        </div>
+                    </md-toolbar>
+                    <p layout-padding>{{data.data.desc}}</p>
+                </md-card>
+                <md-card flex>
+                    <md-toolbar class="md-table-toolbar md-primary">
+                        <div class="md-toolbar-tools">
+                            <h2 class="md-title" style="color:white">Tickets abertos</h2><span flex></span><input type="text" ng-model="filter.search" placeholder="Procurar">
+                        </div>
+                    </md-toolbar>
+                    <div>
+                        <table md-table md-row-select="options.rowSelection" ng-model="selected" md-progress="promise_table" flex>
+                            <tbody md-body>
+                                <tr md-row md-select="dessert" md-on-select="logItem" md-auto-select="options.autoSelect" ng-repeat="dessert in desserts | filter: filter.search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
+                                    <td width="10%" md-cell>
+                                        <md-list-item class="md-2-line">
+                                            <img ng-src="{{dessert.user.profile_pic_url}}" class="md-avatar" />
+                                            <div class="md-list-item-text" layout="column">
+                                                <h3><a href="https://instagram.com/{{dessert.user.username}}" target="_blank">@{{dessert.user.username}}</a></h3>
+                                                <h4>Indicação: <a href="https://instagram.com/{{dessert.profile}}" target="_blank">@{{dessert.profile}}</a></h4>
+                                            </div>
+                                        </md-list-item>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <md-table-pagination md-limit="query.limit" md-page="query.page" md-total="{{desserts.length}}" style="    background-color: #80cbc4;" md-page-select="options.pageSelector" md-boundary-links="options.boundaryLinks" md-on-paginate="logPagination" class="table-footer md-primary table-fixed"></md-table-pagination>
+                    </div>
+                </md-card>
+            </div>
+        </md-card>
+    </div>
+</div>

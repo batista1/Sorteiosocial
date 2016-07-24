@@ -1,0 +1,108 @@
+
+<div class="page">
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong><md-icon md-svg-icon="tag-text-outline" style="color:black"></md-icon> Cadastrar novo sorteio</strong></div>
+        <div class="panel-body">
+        
+            <div class="row">
+                <div >
+                    <form name="form" ng-submit="save()" novalidate>
+                    <div layout="column" layout-gt-sm="row">
+                    <div flex="50" layout-padding>
+                    <md-card >
+
+                               <md-toolbar>
+                              <div class="md-toolbar-tools">
+                                 <h2 style="color:white">Dados da publicação</h2>
+                              </div>
+                           </md-toolbar>
+                           <br>
+                        <p class="bg-danger" layout-padding ng-show="url_valid_error_insta">O link não é válido ou não é publico.</p>
+                        <p class="bg-warning" layout-padding ng-show="url_valid_warning_insta">Atenção, os {{res_data.comments.count-40}} primeiros comentários não serão lidos</p>
+                            <div class="form-group">
+                                <label for="exampleInputEmaail1">Publicação do instagram</label>
+                                <input type="text" class="form-control" name="insta_perfil" ng-model="data.insta.perfil" required  ng-disabled="data.img">
+                                <div class="red" ng-messages="form.$submitted && form.insta_perfil.$error">
+                                    <div ng-message="required">Informe o perfil ou uma página válida.</div>
+                                </div>
+                            </div>
+                            <a href="javascript:;" ng-show="data.img" ng-click="data.img=false;data.insta.perfil=null;url_valid_warning_insta=false">Alterar a publicação?</a>
+                            <md-button class="md-raised md-primary" type="button" ng-hide="data.img" ng-click="test_insta()">Verificar a postagem</md-button>
+
+                        <div ng-show="data.img">
+                        <div class="form-group" >
+                            <label for="exampleInputPassword1">Data do sorteio</label>
+                            <md-datepicker md-min-date="minDate" ng-model="data.data" md-placeholder="Data" name="data" required></md-datepicker>
+                            <div class="red" ng-messages="form.$submitted && form.data.$error">
+                                <div ng-message="required">Informe a data do seu sorteio.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Título</label>
+                            <input type="text" class="form-control" name="titulo" ng-model="data.titulo" required>
+                            <div class="red" ng-messages="form.$submitted && form.titulo.$error">
+                                <div ng-message="required">Informe o título do seu sorteio.</div>
+                            </div>
+                        </div>                        
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Número de vencedores</label>
+                            <input type="number" class="form-control" name="vencedores" ng-model="data.vencedores" required>
+                            <div class="red" ng-messages="form.$submitted && form.vencedores.$error">
+                                <div ng-message="required">Informe o número de vencedores.</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Anunciante</label>
+                            <input type="text" class="form-control" name="titulo" ng-model="res_data.owner.full_name" disabled>
+                            <div class="red" ng-messages="form.$submitted && form.titulo.$error">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Descrição do sorteio</label>
+                            <textarea type="text" class="form-control" name="desc" ng-model="data.desc" disabled rows="6"></textarea>
+                            <div class="red" ng-messages="form.$submitted && form.desc.$error">
+                                <div ng-message="required">Informe uma descrição.</div>
+                            </div>
+                        </div>
+                        </div>
+                        </div >
+                        </md-card>
+                        <div flex="50" layout-padding ng-show="data.img">
+
+                            <md-card>
+                               <md-toolbar>
+                              <div class="md-toolbar-tools">
+                                 <h2 style="color:white">Imagem da publicação</h2>
+                              </div>
+                           </md-toolbar>
+                            <img ng-src="{{data.img}}">
+                        <md-list >                     
+                        <md-list-item ng-click="navigateTo('data usage', $event)" ng-click="like_insta()">
+                            <md-icon md-svg-icon="heart-outline"></md-icon>
+                            <p>A publicação tem {{res_data.likes.count}} curtidas</p>
+                        </md-list-item>
+                        <md-list-item ng-click="navigateTo('data usage', $event)">
+                            <md-icon md-svg-icon="comment"></md-icon>
+                            <p>A publicação tem {{res_data.comments.count}} comentários</p>
+                        </md-list-item>
+                        </md-list>
+                            </md-card>
+
+                        </div>
+                        </div>
+                        
+
+                        <div layout="row" layout-align="end center" ng-show="data.img">
+                            <md-progress-circular md-mode="indeterminate" ng-show="load" md-diameter="20"></md-progress-circular>
+                            <md-button type="submit" class="md-raised md-primary " ng-disabled="load">
+                                Publicar meu novo sorteio
+                            </md-button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

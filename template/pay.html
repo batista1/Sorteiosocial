@@ -1,0 +1,283 @@
+<style type="text/css">
+    .pricing-table {
+        margin-bottom: 20px;
+        padding: 0px;
+        background-color: #fcfcfc;
+        color: #767676;
+        border-radius: 0;
+    }
+    
+    .red {
+        color: red;
+    }
+</style>
+<div class="page">
+    <section class="panel panel-default">
+        <div class="panel-heading"><strong><md-icon md-svg-icon="tag-text-outline" style="color:black"></md-icon> Adicionar créditos a conta</strong></div>
+        <div class="panel-body">
+            <div layout="column" layout-gt-sm="row" layout-wrap ng-hide="data.valor">
+                <div flex ng-repeat="p in pacotes.premiuns">
+                    <md-card>
+                        <section class="pricing-table " layout-padding>
+                            <!--pricing-table-highlight-->
+                            <header>
+                                <h2>{{p.nome}} <span></span></h2> </header>
+                            <p class="pricing-price"> {{p.valor | currency: 'R$ '}} <span></span> </p>
+                            <div class="pricing-plan-details">
+                                <ul>
+                                    <li>
+                                        <md-icon md-svg-icon="check-circle-outline"></md-icon> Aprovação imediata</li>
+                                    <li>
+                                        <md-icon md-svg-icon="check-circle-outline"></md-icon> {{p.desc}}</li>
+                                </ul>
+                            </div>
+                            <footer><a href="javascript:;" class="btn btn-default" ng-click="data.valor=p.valor">Escolher</a></footer>
+                        </section>
+                    </md-card>
+                </div>
+            </div>
+            <div class="row" ng-show="data.valor">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="content-wrap" ng-show="step == 'info'">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="nest" id="validationClose">
+                                    <div class="body-nest" id="validation">
+                                        <div class="form_center">
+                                            <form id="formPayment" name="form" method="post" class="form-horizontal" novalidate>
+                                                <fieldset>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="email">Cartão</label>
+                                                        <div class="controls">
+                                                            <input autofocus type="number" ng-model="data.card" class="form-control" ng-disabled="card_d" name="num" id="email" required data-checkout="cardNumber">
+                                                        </div>
+                                                        <div ng-messages="form.num.$error">
+                                                            <p ng-message="required">Informe o número do seu cartão.</p>
+                                                        </div>
+                                                        <img ng-src="{{card_d[0].issuer.thumbnail}}">
+                                                    </div>
+                                                    <div class="control-group" ng-if="!card_d" style="padding-top:15px">
+                                                        <button type="button" class="btn btn-primary" ng-click="test_card()">Verificar cartão</button>
+                                                    </div>
+                                                    <div class="control-group" ng-if="card_d">
+                                                        <label class="control-label">Código de segurança</label>
+                                                        <div class="controls">
+                                                            <input type="number" ng-model="data.cod" class="form-control" name="cod" maxlength="3" required data-checkout="securityCode">
+                                                        </div>
+                                                        <div ng-messages="form.cod.$error">
+                                                            <p ng-message="required">Informe o código de segurança.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group col-md-6" ng-if="card_d">
+                                                        <label class="control-label">Mês do vencimento</label>
+                                                        <div class="controls">
+                                                            <input type="number" ng-model="data.mes" class="form-control" name="mes" min="01" max="31" maxlength="2" required data-checkout="cardExpirationMonth">
+                                                        </div>
+                                                        <div ng-messages="form.mes.$error">
+                                                            <p ng-message="required">Informe o mês de vencimento.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group col-md-6" ng-if="card_d">
+                                                        <label class="control-label">Ano do vencimento</label>
+                                                        <div class="controls">
+                                                            <input type="text" ng-model="data.ano" class="form-control" name="ano" min="2016" max="2046" maxlength="4" required data-checkout="cardExpirationYear">
+                                                        </div>
+                                                        <div ng-messages="form.ano.$error">
+                                                            <p ng-message="required">Informe o mês de vencimento.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group" ng-if="card_d">
+                                                        <label class="control-label">Nome do titular</label>
+                                                        <div class="controls">
+                                                            <input type="text" ng-model="data.titular" class="form-control" name="titular" required data-checkout="cardholderName">
+                                                        </div>
+                                                        <div ng-messages="form.titular.$error">
+                                                            <p ng-message="required">Informe o titular do cartão.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group" ng-if="card_d">
+                                                        <label class="control-label">CPF do titular</label>
+                                                        <div class="controls">
+                                                            <input data-checkout="docType" type="hidden" value="CPF" />
+                                                            <input type="text" ng-model="data.cpf" class="form-control" name="titular" required data-checkout="docNumber">
+                                                        </div>
+                                                        <div ng-messages="form.titular.$error">
+                                                            <p ng-message="required">Informe o cpf do titular.</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="control-group" ng-if="card_d">
+                                                        <label class="control-label" for="email">Escolha a forma de pagamento</label>
+                                                        <div class="controls">
+                                                            <select type="text" class="form-control" required ng-model="data.parc">
+                                             <option ng-repeat="p in card_d[0].payer_costs" value="{{p.installments}}">{{p.recommended_message}}</option>
+                                          </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group" ng-if="card_d" style="padding-top:15px">
+                                                        <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid && !card_d" ng-click="pay()">Completar venda</button>
+                                                    </div>
+                                                </fieldset>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-wrap" ng-show="step == 'confirm'">
+                        <div class="page-extra">
+                            <!-- Main content -->
+                            <section class="content invoice">
+                                <!-- title row -->
+                                <div class="row">
+                                    <div class="col-xs-12 invoice-header">
+                                        <h2 class="page-header" style="    border-top: none;">
+                                    <i class="fa fa-globe"></i> Soretio Social, Inc.
+                                    <small class="pull-right">Data: {{today | date:'dd/MM/yyyy'}}</small>
+                                </h2>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- info row -->
+                                <div class="row invoice-info">
+                                    <div class="col-sm-6 invoice-col">
+                                        Emissor
+                                        <address>
+                                    <strong>AdsPly, Inc.</strong>
+                                    <br>Telefone: (31) 0123-5432
+                                    <br/>Email: contato@adsply.com
+                                </address>
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-sm-6 invoice-col">
+                                        Cliente
+                                        <address>
+                                    <strong>{{user_dados.nome}}</strong>
+                                    <br/><span ng-if="user_dados.cidade"> Cdade: {{user_dados.cidade}}</span>
+                                    <br/><span ng-if="user_dados.email"> Email: {{user_dados.email}}</span>
+                                    <br/>Email: {{user_dados.email}}
+                                </address>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Qntd</th>
+                                                    <th>Descrição</th>
+                                                    <th>Subtotal</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>{{send_pay.desc}}</td>
+                                                    <td>{{send_pay.val | currency: 'R$ '}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p class="lead">Informações de pagamento:</p>
+                                        <img ng-src="{{card_d[0].issuer.thumbnail}}">
+                                        <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                                            Cartão final: {{response_mp.last_four_digits}}
+                                        </p>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <tr>
+                                                    <th style="width:50%">Subtotal:</th>
+                                                    <td>{{send_pay.val | currency: 'R$ '}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Total:</th>
+                                                    <td>{{send_pay.val | currency: 'R$ '}}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-print">
+                                    <div layout="row">
+                                        <span flex></span>
+                                        <span flex="5"></span>
+                                        <button ng-click="submit_pay(); load_show = true;" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Confirmar compra</button>
+                                    </div>
+                                    <br>
+                                    <md-progress-linear md-mode="indeterminate" ng-show="load_show" md-diameter="20"></md-progress-linear>
+                                </div>
+                            </section>
+                            <!-- /.content -->
+                        </div>
+                    </div>
+                    <!-- /END OF CONTENT -->
+                    <div class="content-wrap" ng-show="step == 'approved'">
+                        <div class="page-extra">
+                            <section class="content invoice">
+                                <div class="row">
+                                    <div class="col-xs-12 invoice-header">
+                                        <h2 class="page-header" style="    border-top: none;">
+                              <md-icon md-svg-icon="check" style="color:black"></md-icon> Sua compra foi aprovada
+                             </h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p class="lead">Informações de pagamento:</p>
+                                        <img ng-src="{{card_d[0].issuer.thumbnail}}">
+                                        <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                                            Cartão final: {{response_mp.last_four_digits}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row no-print">
+                                    <div layout="row">
+                                        <span flex></span>
+                                        <button ui-sref="app.home" class="btn pull-right">Voltar</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- /END OF CONTENT -->
+                    <div class="content-wrap" ng-show="step == 'repproved'">
+                        <div class="page-extra">
+                            <section class="content invoice">
+                                <div class="row">
+                                    <div class="col-xs-12 invoice-header">
+                                        <h2 class="page-header" style="    border-top: none;">
+                              <i class="fa fa-close"></i> Sua compra não foi aprovada
+                             </h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <p class="lead">Informações de pagamento:</p>
+                                        <img ng-src="{{card_d[0].issuer.thumbnail}}">
+                                        <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                                            Cartão final: {{response_mp.last_four_digits}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row no-print">
+                                    <div layout="row">
+                                        <span flex></span>
+                                        <button ui-sref="app.new_sort" class="btn pull-right">Voltar</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- /END OF CONTENT -->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

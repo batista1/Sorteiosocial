@@ -1,0 +1,94 @@
+<style type="text/css">
+   .perfil-bg{
+   background-image: url('http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg');
+   background-size: cover;
+   background-position: center top;
+   background-repeat: no-repeat;
+   height: 140px;
+   width: 100%
+   }
+   .perfil-img{
+   height: 180px;
+   border: solid;
+   border-style: solid;
+   border-color: #FFC100;
+   border-radius: 50%;
+   border-width: 3px;
+   }
+   .perfil-text{
+   position: relative;
+   top: -90px
+   }
+</style>
+<div layout="column" layout-align="center center" >
+   <div class="perfil-bg" layout="row" layout-align="center">
+      <md-button class="md-fab md-primary" aria-label="Eat cake" hide-md hide-lg>
+         <md-icon md-svg-src="cube-unfolded"></md-icon>
+      </md-button>
+      <span flex></span>
+      <md-button class="md-fab md-primary" aria-label="Eat cake" hide-md hide-lg>
+         <md-icon md-svg-src="message-text-outline"></md-icon>
+      </md-button>
+   </div>
+   <div layout="row" class="perfil-text" layout-align="center center" style="width: 100%">
+      <div flex layout="row" layout-align="center center" hide-sm hide-xs>
+         <md-button class="md-fab md-primary" aria-label="Eat cake" >
+            <md-icon md-svg-src="cube-unfolded"></md-icon>
+         </md-button>
+      </div>
+      <div flex layout="row" layout-align="center center">
+         <img class="perfil-img" ng-src="{{person_text.foto ? person_text.foto:'https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png'}}">
+      </div>
+      <div flex layout="row" layout-align="center center" hide-sm hide-xs>
+         <md-button class="md-fab md-primary" aria-label="Eat cake">
+            <md-icon md-svg-src="message-text-outline"></md-icon>
+         </md-button>
+      </div>
+   </div>
+   <span class="md-headline perfil-text">{{profile.dados.nome}}</span>
+   <span class="md-title perfil-text">{{profile.type == 'personal'?'Pessoa jurídica':'Estagiário'}}</span>
+   <span class="md-body-1 perfil-text" style="text-align: center; ">
+      <md-content>
+         <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always">
+            <md-tab label="Resumo">
+               <md-tab-label>
+                  <md-icon md-svg-icon="chart-bar"></md-icon>
+                  <span hide-xs>Resumo</span> 
+               </md-tab-label>
+               <md-tab-body>
+                  <md-content class="md-padding">
+                     <h1 class="md-display-2">Resumo</h1>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+                  </md-content>
+               </md-tab-body>
+            </md-tab>
+            <md-tab label="Contato">
+               <md-tab-label>
+                  <md-icon md-svg-icon="account-card-details"></md-icon>
+                  <span hide-xs> Contato </span> 
+               </md-tab-label>
+               <md-tab-body>
+                  <md-content class="md-padding">
+                     <h1 class="md-display-2">Contato</h1>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
+                     <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
+                     <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                  </md-content>
+               </md-tab-body>
+            </md-tab>
+            <md-tab label="Anúncios">
+               <md-tab-label>
+                  <md-icon md-svg-icon="tag-text-outline"></md-icon>
+                  <span hide-xs>Anúncios</span> 
+               </md-tab-label>
+               <md-tab-body>
+                  <md-content class="md-padding">
+                     <h1 class="md-display-2">Anúncios</h1>
+                     <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+                  </md-content>
+               </md-tab-body>
+            </md-tab>
+         </md-tabs>
+      </md-content>
+   </span>
+</div>

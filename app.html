@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="Sorteio">
+
+
+<script type="text/javascript">
+    window.version = "A1oDaa"
+    server = false
+    if (window.location.href.split("/")[2] == "localhost" && server==false) {
+      window.server = false
+      console.log("operando local")
+        window.ws = "localhost:8080"
+        window.cors = "http://localhost:8081/"
+        window.config_base = {
+          "facebook_id": '668117953338216',
+          "analytcs_id": 'UA-77164828-2'
+        }
+    } else {
+        window.ws = "http://preview.sorteiosocial.com:8080"
+        window.cors = "http://preview.sorteiosocial.com:8081/"
+        window.config_base = {
+          "facebook_id": '668117953338216',
+          "analytcs_id": 'UA-77164828-2'
+        }
+    };
+</script>
+   <head>
+      <title>Sorteio Social</title>
+      <meta name="description" content="A melhor experiência em gestão de clientes." />
+      <meta charset=utf-8>
+      <link rel="icon" href="src/img/icon.png" />
+      <meta name="robots" content="index,follow">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="theme-color" content="#80CBC4">
+      <meta name="mobile-web-app-capable" content="yes">
+
+
+      <meta property="og:locale" content="pt_BR">
+      <meta property="og:url" content="http://sorteiosocial.com">
+      <meta property="og:title" content="Sorteio Social">
+      <meta property="og:site_name" content="Sorteio Social">
+      <meta property="og:description" content="Sorteios online">
+      <meta property="og:image" content="src/img/Sorteio.png">
+      <meta property="og:image:type" content="image/png">
+      <meta property="fb:app_id" content="668117953338216" />
+
+      
+      <link rel="stylesheet" type="text/css" href="src/css/angular-material.css">
+      <link rel="stylesheet" type="text/css" href="src/css/angular-datatable.css">
+      <link rel="stylesheet" type="text/css" href="src/css/angular-carousel.css">
+      <link rel="stylesheet" type="text/css" href="src/css/style.css">
+
+
+
+      <script src="src/js/angular.min.js"></script>
+      <script src="src/js/angular-animate.js"></script>
+      <script src="src/js/angular-aria.js"></script>
+      <script src="src/js/angular-messages.js"></script>
+      <script src="src/js/angular-touch.js"></script>
+      <script src="src/js/angular-material.js"></script>
+      <script src='src/js/angular-datatable.js'></script>
+      <script src='src/js/angular-router.js'></script>
+      <script src="src/js/angular-storage.js"></script>
+      <script src="src/js/angular-flow.js"></script>
+      <script src="src/js/angular-carousel.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.6/angular-locale_pt-br.min.js"></script>
+      <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+
+
+      <script type="text/javascript" src="controller/app.js"></script>
+      <script type="text/javascript" src="controller/state.js"></script>
+      <script type="text/javascript" src="controller/my_part.js"></script>
+      <script type="text/javascript" src="controller/root.js"></script>
+      <script type="text/javascript" src="controller/login.js"></script>
+      <script type="text/javascript" src="controller/autologin.js"></script>
+      <script type="text/javascript" src="controller/register.js"></script>
+      <script type="text/javascript" src="controller/new_sort.js"></script>
+      <script type="text/javascript" src="controller/my_sort.js"></script>
+      <script type="text/javascript" src="controller/search_sort.js"></script>
+      <script type="text/javascript" src="controller/pay.js"></script>
+      <script type="text/javascript" src="controller/details.js"></script>
+<style type="text/css">
+  .md-button.md-default-theme.md-primary.md-raised, .md-button.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab, .md-button.md-primary.md-fab {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: rgb(128,203,196);
+}
+.md-button.md-default-theme.md-raised[disabled], .md-button.md-raised[disabled], .md-button.md-default-theme.md-fab[disabled], .md-button.md-fab[disabled] {
+    background-color: rgba(0,0,0,0.12)!important;
+    color:#757575;
+}
+</style>
+<!--Facebook SDK-->
+<script>
+  (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+          return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  window.fbAsyncInit = function() {
+    FB.init({appId: window.config_base.facebook_id,version: 'v2.4'});
+    FB.getLoginStatus(function(response) {
+        if (response.status === 'connected') {
+          console.log(response)
+        }
+    })
+  };
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', window.config_base.analytcs_id, 'auto'); 
+</script>
+
+
+
+   </head>
+   <body ng-controller="Main" layout="row" flex style="height:100%">
+      <ng-view ui-view="view" flex></ng-view>
+   </body>

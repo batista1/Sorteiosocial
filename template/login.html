@@ -1,0 +1,47 @@
+<style type="text/css">
+  md-icon.md-default-theme, md-icon {
+    color: white;
+}
+.btn-icon-sm, .btn-icon-sm i {
+    line-height: 26px;
+}
+md-icon.form {
+    margin: auto;
+    background-repeat: no-repeat no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor;
+    height: 19px;
+    width: 19px;
+    min-height: 21px;
+    min-width: 21px;
+    color: black!important;
+}
+</style>
+<div class="page-signin">
+    <div class="signin-header">
+        <div class="container text-center">
+            <section class="logo">
+                <img src="src/img/logo-sorteio.png" style="width: 160px">
+            </section>
+        </div>
+    </div>
+    <div class="main-body">
+        <div class="container">
+            <div class="form-container">
+                <span class="line-thru">Acesse sua conta com um clique.</span>
+                <form class="form-horizontal" name="loginform" ng-submit="submit()">
+                    <fieldset>                        
+                        <div class="form-group">
+                            <a href="https://api.instagram.com/oauth/authorize/?client_id=f8fafb94cbef4036a15b0f44cdd5e7f1&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code&scope=public_content+follower_list+likes+comments+relationships"
+                             type="submit" class="btn btn-primary btn-lg btn-block" style="background:#125688"><md-icon md-svg-icon="instagram"></md-icon> Conectar com instagram</a>
+                        </div>
+                    </fieldset>
+                </form>
+                <section>
+                    <p class="text-center text-muted text-small">Sua conta é criada automaticamente quando você participa de qualquer sorteio no instagram que esteja vinculado ao Sorteio Social. Caso ainda não participe de algum sorteio, sua conta será criada no primeiro login.</p>
+                </section>                
+            </div>
+        </div>
+    </div>
+</div>

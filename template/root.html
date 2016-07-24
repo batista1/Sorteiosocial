@@ -1,0 +1,36 @@
+<div layout="row" flex style="height: 100%;">
+    <md-sidenav class="md-whiteframe-z2" md-component-id="painelprincipal" md-is-locked-open="$mdMedia('gt-sm')" md-theme="dark" style="color: white;">
+        <div ng-include="'template/menu.html?a'"></div>
+    </md-sidenav>
+    <div layout="column" flex>
+        <md-toolbar class="md-whiteframe-z2" style="fill:white; color:white">
+            <div class="md-toolbar-tools" layout="row" layout-align="center center">
+                <md-button ng-click="buildToggler('painelprincipal')" class="navbar-toggle md-icon-button" aria-label="btncasd" hide-gt-sm>
+                    <md-icon md-svg-icon="menu" style="fill:white; color:white"></md-icon>
+                </md-button>
+                <md-menu>
+                    <md-button aria-label="Open phone interactions menu" class="" ng-click="$mdOpenMenu($event)">
+                        <md-icon md-svg-icon="settings" style="fill:white; color:white"></md-icon> Conta
+                    </md-button>
+                    <md-menu-content width="4">
+                        <md-menu-item>
+                            <md-button ng-click="ctrl.redial($event)">
+                                <md-icon md-svg-icon="account-outline"></md-icon>
+                                Perfil
+                            </md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button ng-click="logout()" >
+                                <md-icon md-svg-icon="logout"></md-icon>
+                                Sair
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </md-toolbar>
+        <md-content layout="column" flex>
+            <ng-view ui-view="subview" flex></ng-view>
+        </md-content>
+    </div>
+</div>

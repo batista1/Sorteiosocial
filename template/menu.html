@@ -1,0 +1,70 @@
+<style type="text/css">
+    .perfil_bg {
+        background: url(http://2.bp.blogspot.com/-2RewSLZUzRg/U-9o6SD4M6I/AAAAAAAADIE/voax99AbRx0/s1600/14%2B-%2B1%2B%281%29.jpg);
+        background-size: cover;
+    }
+    
+    .main-fab {
+        position: relative;
+        /* z-index: 20; */
+        /* font-size: 30px; */
+        top: 40px;
+        right: 0px;
+    }
+    
+    md-toolbar.md-dark-theme:not(.md-menu-toolbar) md-icon {
+        color: rgba(0, 0, 0, 0.87);
+        fill: rgba(255, 255, 255, 0.87);
+    }
+</style>
+<md-toolbar md-theme="dark">
+    <div class="md-toolbar-tools" layout="row">
+        <md-icon md-svg-icon="apps"></md-icon>
+        <h2>
+         <span style="color:white">Sorteio Inicial</span>
+      </h2>
+        <span flex></span>
+        <md-button hide-gt-sm class="md-icon-button" aria-label="Settings" ng-click="buildToggler('painelprincipal')">
+            <md-icon md-svg-icon="close"></md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<div layout="row" layout-align="center center" layout-padding>
+    <img src="src/img/logo-sorteio.png" style="height:180px">
+</div>
+<md-divider inset></md-divider>
+<div layout="row">
+    <md-button ui-sref="app.pay" class="md-raised md-primary md-block" flex>{{user.points ? 'você tem '+user.points+' pontos':'clique para adicionar pontos'}}</md-button>
+</div>
+<md-list>
+    <md-list-item ui-sref="app.search_sort">
+        <md-icon md-svg-icon="account-search"></md-icon>
+        <p> Procurar sorteios </p>
+    </md-list-item>
+    <md-list-item ui-sref="app.pay">
+        <md-icon md-svg-icon="star-half"></md-icon>
+        <p> Comprar mais pontos </p>
+    </md-list-item>
+    <md-list-item ui-sref="app.search_sort">
+        <md-icon md-svg-icon="star-circle"></md-icon>
+        <p> Troque seus pontos </p>
+    </md-list-item>
+    <md-list-item ui-sref="app.search_sort">
+        <md-icon md-svg-icon="airplane-takeoff"></md-icon>
+        <p> Compre milhas </p>
+    </md-list-item>
+    <md-list-item ui-sref="app.my_part">
+        <md-icon md-svg-icon="sort-numeric"></md-icon>
+        <p> Soteios parcipantes </p>
+    </md-list-item>
+    <md-list-item ui-sref="app.my_sort">
+        <md-icon md-svg-icon="newspaper"></md-icon>
+        <p> Meus sorteios </p>
+    </md-list-item>
+    <md-list-item ui-sref="app.new_sort">
+        <md-icon md-svg-icon="tag-text-outline"></md-icon>
+        <p> Criar novo sorteio </p>
+    </md-list-item>
+
+</md-list>
+<md-divider inset></md-divider>
