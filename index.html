@@ -21,19 +21,14 @@
       <meta property="og:image" content="src/img/Sorteio.png">
       <meta property="og:image:type" content="image/png">
       <meta property="fb:app_id" content="668117953338216" />
-    <!--[if lt IE 9]>
-            <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-        <![endif]-->
-    <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+   
     <link rel="stylesheet" href="./site_src_files/bootstrap.css">
     <link rel="stylesheet" href="./site_src_files/style.css">
 </head>
 <script type="text/javascript">
     window.version = "A1oDaa"
-    if (window.location.href.split("/")[2] == "localhost") {
-      window.server = false
+    window.server = false
+    if (window.location.href.split("/")[2] == "localhost" && server==false) {
       console.log("operando local")
         window.ws = "localhost:8080"
         window.cors = "http://localhost:8081/"
