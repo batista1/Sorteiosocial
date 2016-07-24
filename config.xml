@@ -10,7 +10,7 @@
     <icon src="src/img/icon.png" />
     <content src="app.html" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
+    <plugin name="cordova-plugin-inappbrowser"   source="npm" spec="1.0.1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
