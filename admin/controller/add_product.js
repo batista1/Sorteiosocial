@@ -1,5 +1,5 @@
 app.controller("add_product", function($scope, $localStorage, $http, $rootScope, $mdToast){
-	window.cors = "http://localhost:8081/"
+	window.cors = "http://socket.sorteiosocial.com:8081/"
   $scope.user = $localStorage.user
     $scope.data = {
         "instagram": true,
