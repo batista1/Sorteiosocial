@@ -1,0 +1,14 @@
+<md-toolbar><a ui-sref="app.add_product"><md-button class="md-raised md-default" > Adicionar </md-button></a></md-toolbar>
+<div layout='column' layout-paddingn ng-repeat="card in data">
+	<md-card layout="row">
+	<div style="max-width:240px; height:240px">
+		<img src="{{card.data.img}}">
+	</div>
+	<div layout-padding>
+		<h3>{{card.data.nome}}</h3>
+		<p>Vencimento: {{card.data.data | date: "dd/MM/yyyy"}} </p>
+		<p>Lances: 0 </p>
+		<p>Último lance: Ainda não recebeu lances nesse produto. </p>
+	</div>
+	</md-card>
+</div>

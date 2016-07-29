@@ -22,15 +22,15 @@
                             <p class="text-muted">Online</p>
                         </li>
                         <li>
-                            <p class="size-h2 color-info"><md-icon md-svg-icon="phone-log" style="width:48px;height:48px;"></md-icon></p>
-                            <p class="size-h3">{{counter.logged}}</p>
-                            <p class="text-muted">Logados</p>
-                        </li>
-                        <li>
                             <p class="size-h2 color-info"><md-icon md-svg-icon="playlist-check" style="width:48px;height:48px;"></md-icon></p>
-                            <p class="size-h3">{{users.length}}</p>
-                            <p class="text-muted">Cadastrados</p>
-                        </li>                      
+                            <p class="size-h3">{{users_data.count}}</p>
+                            <p class="text-muted">Contas</p>
+                        </li> 
+                        <li>
+                            <p class="size-h2 color-info"><md-icon md-svg-icon="phone-log" style="width:48px;height:48px;"></md-icon></p>
+                            <p class="size-h3">{{users_data.count_r}}</p>
+                            <p class="text-muted">Registradas</p>
+                        </li>                     
                     </ul>
                 </div>
             </section>
@@ -81,7 +81,7 @@
 
 
 
-<table md-table md-row-select="options.rowSelection" ng-model="selected" md-progress="promise_table" flex>
+<table md-table md-row-select="options.rowSelection" ng-model="selected" md-progress="promise_table" flex ng-show="dessert">
    <thead fix-head md-head md-order="query.order" md-on-reorder="logOrder">
       <tr md-row>
          <th md-column md-order-by="dados.nome"><span>Nome</span></th>

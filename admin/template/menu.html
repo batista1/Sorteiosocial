@@ -1,45 +1,53 @@
-
-<md-toolbar >
-   <div class="md-toolbar-tools">
-      <h2>
-         <span class="md-headline" style="font-weight: 300">vControl</span>
-      </h2>
-      <span flex></span>
-      <md-button hide-gt-sm class=" ihid md-icon-button" aria-label="Settings" ng-click="buildToggler('painelprincipal')">
-         <md-icon md-svg-icon="close"></md-icon>
-      </md-button>
-   </div>
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>
+            <md-icon md-svg-icon="google-controller"></md-icon>
+            <span class="md-headline" style="font-weight: 300">vControl</span>
+        </h2>
+        <span flex></span>
+        <md-button hide-gt-sm class=" ihid md-icon-button" aria-label="Settings" ng-click="buildToggler('painelprincipal')">
+            <md-icon md-svg-icon="close"></md-icon>
+        </md-button>
+    </div>
 </md-toolbar>
 <md-list>
-   <md-list-item style="height: 48px" ui-sref="app.home" hide>
-   <md-icon md-svg-icon="view-dashboard"></md-icon>
-    <p> Dashboard </p>
-  </md-list-item>
-  <md-divider></md-divider>
-   <md-list-item style="height: 48px" ui-sref="app.users">
-   <md-icon md-svg-icon="account-multiple-outline"></md-icon>
-    <p> Usuários </p>
-  </md-list-item>
-   <md-list-item style="height: 48px" ui-sref="app.adverts">
-   <md-icon md-svg-icon="tag-text-outline"></md-icon>
-    <p> Anúncios </p>
-  </md-list-item>
-   <md-list-item style="height: 48px" ui-sref="config"  hide>
-   <md-icon md-svg-icon="alert-circle-outline"></md-icon>
-    <p> Denúncias </p>
-  </md-list-item>
-  <md-divider></md-divider>
-   <md-list-item style="height: 48px" ui-sref="config"  hide>
-   <md-icon md-svg-icon="settings"></md-icon>
-    <p> Configurações </p>
-  </md-list-item>
-   <md-list-item style="height: 48px" ui-sref="config"  hide>
-   <md-icon md-svg-icon="map-marker-radius"></md-icon>
-    <p> Locais </p>
-  </md-list-item>
-   <md-list-item style="height: 48px" ui-sref="locais"  hide>
-   <md-icon md-svg-icon="sitemap"></md-icon>
-    <p> Categorias </p>
-  </md-list-item>
+    <md-list-item style="height: 48px" ui-sref="app.home" hide>
+        <md-icon md-svg-icon="view-dashboard"></md-icon>
+        <p> Dashboard </p>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item style="height: 48px" ui-sref="app.users">
+        <md-icon md-svg-icon="account-multiple-outline"></md-icon>
+        <p> Usuários </p>
+    </md-list-item>
+    <md-list-item style="height: 48px" ui-sref="app.adverts">
+        <md-icon md-svg-icon="account-search"></md-icon>
+        <p> Sorteios </p>
+    </md-list-item>
+    <md-list-item style="height: 48px" ui-sref="app.product">
+        <md-icon md-svg-icon="camera"></md-icon>
+        <p> Produtos </p>
+    </md-list-item>
+    <md-list-item style="height: 48px" ui-sref="app.config">
+        <md-icon md-svg-icon="clipboard-account"></md-icon>
+        <p> Contas do instagram </p>
+    </md-list-item>
+    <md-list-item style="height: 48px" ui-sref="config" hide>
+        <md-icon md-svg-icon="alert-circle-outline"></md-icon>
+        <p> Denúncias </p>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item style="height: 48px" ui-sref="app.config">
+        <md-icon md-svg-icon="settings"></md-icon>
+        <p> Configurações </p>
+    </md-list-item>
+    <md-list-item style="height: 48px" ui-sref="config" hide>
+        <md-icon md-svg-icon="map-marker-radius"></md-icon>
+        <p> Locais </p>
+    </md-list-item>
+    <md-list-item style="height: 48px" ui-sref="locais" hide>
+        <md-icon md-svg-icon="sitemap"></md-icon>
+        <p> Categorias </p>
+    </md-list-item>
 </md-list>
 <md-divider inset></md-divider>

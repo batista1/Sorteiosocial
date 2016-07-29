@@ -1,24 +1,23 @@
 app.controller("users", function ($scope, $rootScope, $timeout, $window){
 	$scope.counter = {}
+	$scope.users_data = {}
 	$rootScope.socket.emit("mgmt_user", "fetch")
 	$rootScope.socket.removeListener("mgmt_user", "fetch")
-	$rootScope.socket.on("mgmt_user", function(data){
-		console.log(data)
-		$scope.users = data
+	$rootScope.socket.on("mgmt_user", function(data, data1){
+		$scope.users_data.count = data
+		$scope.users_data.count_r = data1
+		console.log(data1)
 		$scope.$apply()
 	})
 	$rootScope.socket.on("count_user", function(data, logged, online){
-		console.log(data)
-		$scope.counter = {"logged":logged, "online":online}
-		
+		$scope.counter = {"logged":logged, "online":online}		
 		$scope.count_user = data
-		console.log(data)
 		$scope.labels = []
 		$scope.ind = []
+		console.log(data)
 		angular.forEach(data, function(v, k){
 			$scope.labels.push("Dia "+v._id.day)
 			$scope.ind.push(v.count)
-			console.log(v)
 		})
 		$scope.startchart($scope.labels, $scope.ind)
 		$scope.$apply()
@@ -38,17 +37,15 @@ app.controller("users", function ($scope, $rootScope, $timeout, $window){
     	$scope.$apply()
     })
 
-
-
 $scope.startchart = function(lb, ind){
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: lb,
+        labels: lb.reverse(),
         datasets: [{
             label: 'Número de cadastros por dia',
-            data: ind
+            data: ind.reverse()
         }],
         options: {
 	        responsive: true,

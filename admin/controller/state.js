@@ -47,11 +47,25 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
         "root": { templateUrl: "template/adverts.html?"+ window.version,controller: "adverts"}
        }
   })
-  .state('config', {
+  .state('app.product', {
+    url: "/product",
+    views: {
+        //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
+        "root": { templateUrl: "template/product.html?asa"+ window.version,controller: "product"}
+       }
+  })
+  .state('app.add_product', {
+    url: "/add_product",
+    views: {
+        //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
+        "root": { templateUrl: "template/add_product.html?"+ window.version,controller: "add_product"}
+       }
+  })
+  .state('app.config', {
     url: "/config",
     views: {
         //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
-        "view": { templateUrl: "template/config.html?"+ window.version,controller: "config"}
+        "root": { templateUrl: "template/config.html?"+ window.version,controller: "config"}
        }
   })
   .state('locais', {
