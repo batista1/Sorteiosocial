@@ -67,7 +67,20 @@
                      <textarea ng-model="api.opfb.secret" name="desc"></textarea>
                   </md-input-container>
                </div>
-               <p class="md-caption" ng-show="api.facebook">Clique aqui para acessar seu APP no facebook <a target="_blank" href="https://developers.facebook.com/apps/">https://developers.facebook.com/apps/</a></p>
+               <p class="md-caption" ng-show="api.facebook">Clique aqui para acessar seu APP no facebook <a target="_blank" href="https://developers.facebook.com/apps/">https://developers.facebook.com/apps/</a></p>               
+               <div layout-gt-sm="row">
+                  <md-switch ng-model="api.instagram" aria-label="Switch 1" flex>
+                     Aceitar login via instagram?
+                  </md-switch>
+                  <md-input-container class="md-block" flex ng-show="api.instagram">
+                     <label>Client ID</label>
+                     <textarea ng-model="api.opinsta.id" name="fbid"></textarea>
+                  </md-input-container>
+                  <md-input-container class="md-block" flex flex ng-show="api.instagram">
+                     <label>Secret Key</label>
+                     <textarea ng-model="api.opinsta.secret" name="desc"></textarea>
+                  </md-input-container>
+               </div>
                <div layout-gt-sm="row">
                   <md-switch ng-model="api.google" aria-label="Switch 1" flex>
                      Aceitar login via Google+?

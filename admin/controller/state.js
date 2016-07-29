@@ -65,7 +65,7 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
     url: "/config",
     views: {
         //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
-        "root": { templateUrl: "template/config.html?"+ window.version,controller: "config"}
+        "root": { templateUrl: "template/config.html?a"+ window.version,controller: "config"}
        }
   })
   .state('locais', {

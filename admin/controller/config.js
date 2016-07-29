@@ -9,17 +9,18 @@ app.controller('config', function($scope, $timeout, $rootScope, $localStorage, $
 		$scope.allow()
 	}
 	$scope.save = function(){
-		$rootScope.socket.emit("save_config", $scope.site, $scope.api, $scope.payment, $scope.smtp, $scope.server, localStorage.token)
-		console.log("saved")
+		console.log("enviou save")
+		$rootScope.socket.emit("save_config", $scope.site, $scope.api, $scope.payment, $scope.smtp, $scope.server, '579abb75be04d2b0294d88a2')
 	}
-	$rootScope.socket.emit("load_adm", localStorage.token)
-	$rootScope.socket.on("load_adm_success", function(data){
+	$rootScope.socket.on('save_config', function(){console.log("config saved!")})
+	$rootScope.socket.emit("open_config", '579abb75be04d2b0294d88a2')
+	$rootScope.socket.on("open_config", function(data){
 		console.log(data)
 		$scope.site = data.site
 		$scope.api = data.api
 		$scope.smtp = data.email
 		$scope.payment = data.payment
 		$scope.server = data.server
-	})
-	
+		$scope.$apply()
+	})	
  })
