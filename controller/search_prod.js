@@ -14,4 +14,18 @@ app.controller('search_prod', function($scope, $rootScope, $localStorage) {
         $scope.cards = r;
         $scope.$apply()
     })
+    $scope.make_lance = function(id){
+        $rootScope.socket.emit("lance", id, $localStorage.user._id, $localStorage.user.username)
+    }
+    $rootScope.socket.removeListener('new_lance')
+    $rootScope.socket.on('new_lance', function(res)
+    {
+        console.log(res)
+        angular.forEach($scope.cards, function(v, k){
+            if (v._id == res._id) {
+                $scope.cards[k] = res
+                $scope.$apply()
+            }
+        })
+    })
 })

@@ -40,14 +40,14 @@
                 <div layout="row">
                     <div layout="column">
                         <span class="md-caption"><md-icon md-svg-icon="calendar"></md-icon>Encerramento: {{c.data.data | date:'dd/MM/yy'}}</span>
-                        <span class="md-caption"><md-icon md-svg-icon="account"></md-icon>Anunciante: <b>@{{c.output.owner.username}}</b> </span>
-                        <span class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Tickets abertos: {{c.tickets}} </span>
+                        <span class="md-caption"><md-icon md-svg-icon="account"></md-icon>Último lance: <b>@{{c.last_user.name}}</b> </span>
+                        <span class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Valor: {{c.lances | currency: "R$ "}} </span>
                     </div>
                     <div layout="column">
                     </div>
                 </div>
             </div>
-            <md-button class="md-raised md-primary" ui-sref="app.details({user: c._id, id: c.id})">Participar</md-button>
+            <md-button class="md-raised md-primary" ng-click="make_lance(c._id)">Dar Lance</md-button>
         </md-card>
     </div>
 </div>
