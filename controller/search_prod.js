@@ -6,6 +6,10 @@ app.controller('search_prod', function($scope, $rootScope, $localStorage) {
 
    }
 
+    $scope.get_data = function(date){
+        var time = new Date(date).getTime() / 1000 - new Date().getTime() / 1000
+        return time
+    }
     // 1st ngRepeat demo
     $scope.slides = []
     $rootScope.socket.emit("fetch_prod", $localStorage.user._id)
@@ -16,6 +20,7 @@ app.controller('search_prod', function($scope, $rootScope, $localStorage) {
     })
     $scope.make_lance = function(id){
         $rootScope.socket.emit("lance", id, $localStorage.user._id, $localStorage.user.username)
+        $localStorage.user.points--
     }
     $rootScope.socket.removeListener('new_lance')
     $rootScope.socket.on('new_lance', function(res)

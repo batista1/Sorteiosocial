@@ -1,4 +1,4 @@
-var app = angular.module('Sorteio', ['ngAnimate', 'ngMaterial', 'ngMessages', 'ui.router', 'ngStorage', 'flow', 'angular-carousel','md.data.table']);
+var app = angular.module('Sorteio', ['ngAnimate', 'ngMaterial', 'ngMessages', 'ui.router', 'ngStorage', 'flow', 'angular-carousel','md.data.table', 'timer']);
 console.log("Iniciando APP!")
 
 //App principal
