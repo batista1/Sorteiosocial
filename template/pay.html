@@ -96,6 +96,15 @@
                                                         </div>
                                                     </div>
                                                     <div class="control-group" ng-if="card_d">
+                                                        <label class="control-label">Email do titular</label>
+                                                        <div class="controls">
+                                                            <input type="text" ng-model="email" class="form-control" name="email" required>
+                                                        </div>
+                                                        <div ng-messages="form.titular.$error">
+                                                            <p ng-message="required">Informe o titular do cartão.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group" ng-if="card_d">
                                                         <label class="control-label">CPF do titular</label>
                                                         <div class="controls">
                                                             <input data-checkout="docType" type="hidden" value="CPF" />

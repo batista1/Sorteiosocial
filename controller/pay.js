@@ -47,7 +47,7 @@ app.controller("pay", function($scope, $rootScope, $http, $filter, $httpParamSer
                     "desc": "Compra de crédito AdsPly",
                     "payment_method_id": $scope.card_d[0].payment_method_id,
                     "payer": {
-                        "email": $localStorage.user.dados.email
+                        "email": $scope.email
                     }
                 }
                 console.log($localStorage.user)
