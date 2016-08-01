@@ -44,6 +44,13 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
         "subview": { templateUrl: "template/search_sort.html?"+ window.version,  controller: 'search_sort'}
        }
   })
+  .state('app.search_prod', {
+    url: "/search_prod",
+    views: {
+        //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
+        "subview": { templateUrl: "template/search_prod.html?"+ window.version,  controller: 'search_prod'}
+       }
+  })
   .state('app.my_sort', {
     url: "/my_sort",
     views: {
