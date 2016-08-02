@@ -20,7 +20,6 @@ app.controller("pay", function($scope, $rootScope, $http, $filter, $httpParamSer
 
     $scope.test_card = function() {
         var c = $filter('limitTo')($scope.data.card, 6)
-        console.log(c)
         Mercadopago.getInstallments({
             bin: c,
             amount: $scope.data.valor
@@ -34,7 +33,6 @@ app.controller("pay", function($scope, $rootScope, $http, $filter, $httpParamSer
     $scope.pay = function() {
         
         var element = document.getElementById('formPayment');
-        console.log(element)
         var form = $httpParamSerializerJQLike($scope.data)
         Mercadopago.createToken(element, function(e, r) {
             if (r.error) {
@@ -44,13 +42,12 @@ app.controller("pay", function($scope, $rootScope, $http, $filter, $httpParamSer
                     "val": $scope.data.valor,
                     "installments": $scope.data.parc,
                     "token": r.id,
-                    "desc": "Compra de crédito AdsPly",
+                    "desc": "Compra de crédito SorteioSocial",
                     "payment_method_id": $scope.card_d[0].payment_method_id,
                     "payer": {
-                        "email": $scope.email
+                        "email": $scope.data.email
                     }
                 }
-                console.log($localStorage.user)
                 console.log($scope.send_pay)
         		$scope.step = 'confirm'
             	$scope.response_mp = r            	
@@ -60,21 +57,18 @@ app.controller("pay", function($scope, $rootScope, $http, $filter, $httpParamSer
         })
     }
     $scope.submit_pay = function(){
-    	console.log("asd")
     	$rootScope.socket.emit("pay", $scope.send_pay, $localStorage.user._id)	
 	    $rootScope.socket.removeListener("confirm_pay")
         $rootScope.socket.on("confirm_pay", function(r){
         	console.log(r)
         	if (r.error != 'refused') {        		
         		$scope.step = 'approved'
-        		$localStorage.user = r.value        
+                $localStorage.user.points=r.value.points      
         		$scope.$apply()		
-				document.getElementById("g1").innerHTML= ''
-		        rpoints($localStorage.user.points)
         	}else{
-
         		$scope.step = 'repproved'
         	}
+
         	$scope.load_show = false
         	$scope.$apply()
         })

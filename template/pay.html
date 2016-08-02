@@ -47,9 +47,9 @@
                                             <form id="formPayment" name="form" method="post" class="form-horizontal" novalidate>
                                                 <fieldset>
                                                     <div class="control-group">
-                                                        <label class="control-label" for="email">Cartão</label>
+                                                        <label class="control-label">Cartão</label>
                                                         <div class="controls">
-                                                            <input autofocus type="number" ng-model="data.card" class="form-control" ng-disabled="card_d" name="num" id="email" required data-checkout="cardNumber">
+                                                            <input autofocus type="number" ng-model="data.card" class="form-control" ng-disabled="card_d" name="num" id="card" required data-checkout="cardNumber">
                                                         </div>
                                                         <div ng-messages="form.num.$error">
                                                             <p ng-message="required">Informe o número do seu cartão.</p>
@@ -98,10 +98,10 @@
                                                     <div class="control-group" ng-if="card_d">
                                                         <label class="control-label">Email do titular</label>
                                                         <div class="controls">
-                                                            <input type="text" ng-model="email" class="form-control" name="email" required>
+                                                            <input type="text" ng-model="data.email" class="form-control" name="email" required>
                                                         </div>
-                                                        <div ng-messages="form.titular.$error">
-                                                            <p ng-message="required">Informe o titular do cartão.</p>
+                                                        <div ng-messages="form.email.$error">
+                                                            <p ng-message="required">Informe o email do titular do cartão.</p>
                                                         </div>
                                                     </div>
                                                     <div class="control-group" ng-if="card_d">
@@ -154,9 +154,9 @@
                                     <div class="col-sm-6 invoice-col">
                                         Emissor
                                         <address>
-                                    <strong>AdsPly, Inc.</strong>
+                                    <strong>Sorteio Social, Inc.</strong>
                                     <br>Telefone: (31) 0123-5432
-                                    <br/>Email: contato@adsply.com
+                                    <br/>Email: contato@sorteiosocial.com
                                 </address>
                                     </div>
                                     <!-- /.col -->
