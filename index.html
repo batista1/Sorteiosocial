@@ -2,62 +2,68 @@
 <!-- saved from url=(0048)http://themes.makebecool.com/demo/themeKidsDemo/ -->
 <html>
 <head>
-      <title>Sorteio Social</title>
-      <meta name="description" content="A melhor experiência em gestão de clientes." />
-      <meta charset=utf-8>
-      <link rel="icon" href="src/img/icon.png" />
-      <meta name="robots" content="index,follow">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="theme-color" content="#80CBC4">
-      <meta name="mobile-web-app-capable" content="yes">
+    <title>Sorteio Social</title>
+    <meta name="description" content="A melhor experiência em gestão de clientes." />
+    <meta charset=utf-8>
+    <link rel="icon" href="src/img/icon.png" />
+    <meta name="robots" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="theme-color" content="#80CBC4">
+    <meta name="mobile-web-app-capable" content="yes">
 
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="http://sorteiosocial.com">
+    <meta property="og:title" content="Sorteio Social">
+    <meta property="og:site_name" content="Sorteio Social">
+    <meta property="og:description" content="Sorteios online">
+    <meta property="og:image" content="src/img/Sorteio.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="fb:app_id" content="668117953338216" />
 
-      <meta property="og:locale" content="pt_BR">
-      <meta property="og:url" content="http://sorteiosocial.com">
-      <meta property="og:title" content="Sorteio Social">
-      <meta property="og:site_name" content="Sorteio Social">
-      <meta property="og:description" content="Sorteios online">
-      <meta property="og:image" content="src/img/Sorteio.png">
-      <meta property="og:image:type" content="image/png">
-      <meta property="fb:app_id" content="668117953338216" />
-   
     <link rel="stylesheet" href="./site_src_files/bootstrap.css">
     <link rel="stylesheet" href="./site_src_files/style.css">
 </head>
 <script type="text/javascript">
     window.version = "A1oDaa"
     window.server = false
-    if (window.location.href.split("/")[2] == "localhost" && server==false) {
-      console.log("operando local")
+    if (window.location.href.split("/")[2] == "localhost" && server == false) {
+        console.log("operando local")
         window.ws = "localhost:8080"
         window.cors = "http://localhost:8081/"
         window.config_base = {
-          "facebook_id": '668117953338216',
-          "analytcs_id": 'UA-77164828-2'
+            "facebook_id": '668117953338216',
+            "analytcs_id": 'UA-77164828-2'
         }
     } else {
         window.ws = "http://preview.sorteiosocial.com:8080"
         window.cors = "http://preview.sorteiosocial.com:8081/"
         window.config_base = {
-          "facebook_id": '668117953338216',
-          "analytcs_id": 'UA-77164828-2'
+            "facebook_id": '668117953338216',
+            "analytcs_id": 'UA-77164828-2'
         }
     }
 </script>
 <style type="text/css">
     .footer-top {
-    padding: 68px 22px 10px 22px;
-    background-color: #80cbc4 !important;
-}
-.slider-item .main-img {
-    position: absolute;
-    width: auto;
-    z-index: 5;
-    width: 520px;
-    bottom: 0px;
+        padding: 68px 22px 10px 22px;
+        background-color: #80cbc4 !important;
+    }
+    
+    .slider-item .main-img {
+        position: absolute;
+        width: auto;
+        z-index: 5;
+        width: 520px;
+        bottom: 0px;
+    }
+@media (min-width: 1200px) {
+    .slider-wrap{
+        display: block!important;
+    }
 }
 </style>
+
 <body class="theme-mode">
     <div class="socials">
         <div class="container">
@@ -101,25 +107,23 @@
                         <ul class="nav navbar-nav navbar-right z-depth-1">
                             <li><a href="http://themes.makebecool.com/demo/themeKidsDemo/about.html">HOME</a>
                             </li>
-                            <li><a href="http://themes.makebecool.com/demo/themeKidsDemo/about.html">SOBRE</a>
-                            </li>
                             <li><a href="http://themes.makebecool.com/demo/themeKidsDemo/contacts.html">CONTATO</a>
                             </li>
                             <li><a href="app.html">ACESSE SUA CONTA</a>
                             </li>
-                        </ul>                        
+                        </ul>
                     </div>
                 </div>
             </nav>
         </header>
-        <div class="slider-wrap" data-scroll-index="0">
+        <div class="slider-wrap" data-scroll-index="0" style="display:none">
             <div class="slider slick-initialized slick-slider" id="main-slider">
                 <div aria-live="polite" class="slick-list draggable" tabindex="0">
                     <div class="slick-track" style="opacity: 1; width: 7915px; transform: translate3d(-1583px, 0px, 0px);">
                         <div class="slider-item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 1583px;"></div>
                         <div class="slider-item slick-slide slick-active" data-slick-index="0" aria-hidden="false" style="width: 1583px;">
                             <img src="./site_src_files/back-1.jpg" alt="" class="back">
-                            <div class="slider-title"><b class="up">Participe de</b> sorteios 
+                            <div class="slider-title"><b class="up">Participe de</b> sorteios
                                 <br> <b>&amp;</b> ganhe <b class="bottom">pontos</b>
                             </div>
                             <div class="container" style="margin-left: 0px;">
@@ -131,12 +135,17 @@
                                     </ul>
                                 </div>
                                 <img src="src/img/home.png" alt="" class="main-img">
-                                
                             </div>
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
+        </div>
+        <div><br><br><br><br><br><br>
+            
+                            <div class="slider-title" style="    text-align: center;"><b class="up">Participe de</b> sorteios
+                                <br> <b>&amp;</b> ganhe <b class="bottom">pontos</b>
+                            </div>
         </div>
         <div class="in-block" data-scroll-index="1">
             <h2>Aqui você controla a sua <b>sorte</b></h2>
@@ -147,22 +156,22 @@
                         <span class="rect rect-f">
                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
 <path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"></path>
+    c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
+    c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"></path>
 </svg>
                             <span class="mdi-action-class"></span>
                         </span>
                         <div class="s-main">
                             <h4>Controle de tickets</h4>
-                            <p>Participe dos sorteios e receba um ticket que é válido para 1 participação</p>
+                            <p>Participe dos sorteios e receba um ticket, a cada participação um novo ticket para concorrer aos sorteios, e ainda acumule pontos para trocar por produtos em nosso e-commmerce.</p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4 col-lg-4 s-block">
                         <span class="rect rect-f">
                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
 <path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"></path>
+    c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
+    c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"></path>
 </svg>
                             <span class="mdi-image-timer-auto"></span>
                         </span>
@@ -175,8 +184,8 @@
                         <span class="rect rect-f">
                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
 <path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"></path>
+    c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
+    c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"></path>
 </svg>
                             <span class="mdi-image-palette"></span>
                         </span>
@@ -194,12 +203,10 @@
                 <form action="http://themes.makebecool.com/demo/themeKidsDemo/#" class="form">
                     <p class="form-text">Acesse sua conta pelo instagram e veja todos os sorteios que você já está participando e controle suas milhas</span>
                     </p>
-                   
-                            <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code"
-                             type="submit" class="btn btn-default btn-lg btn-block" style="background:#125688; color:white">
-                             <i class="fa fa-instagram" style="color:white; font-size:22px"></i> 
-                             Conectar com instagram
-                             </a>
+
+                    <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code" type="submit" class="btn btn-default btn-lg btn-block" style="background:#125688; color:white">
+                        <i class="fa fa-instagram" style="color:white; font-size:22px"></i> Conectar com instagram
+                    </a>
                 </form>
             </div>
         </section>
@@ -207,239 +214,22 @@
             <h2>Veja os sorteios <br><b>que irão finalizar em breve</b></h2>
             <div class="row">
                 <div class="col-xs-12 g-item" id="sort1">
-                    
+
                 </div>
                 <div class="col-xs-12 g-item" id="sort2">
-                    
+
                 </div>
                 <div class="col-xs-12 g-item" id="sort3">
-                    
-                </div>
-                
-            </div>
-        </section>
-        <!-- <section class="gall-block" data-scroll-index="4">
-            <div class="container">
-                <h2>Gallery</h2>
-                <div class="gallery-inner">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="gall-item">
-                                <div class="g-it">
-                                    <a href="#" class="g-top">
-                                        <img src="uploads/gallery/g-1.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="g-bott">
-                                    <div class="g-title"><a href="">Kids Club invites parents and their children from 1 to 7 years</a>
-                                    </div>
-                                    <ul class="i-list">
-                                        <li><span class="i-icon mdi-device-access-time"></span><span class="i-text">September 15, 2014</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-image-photo-camera"></span><span class="i-text">15</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-av-videocam"></span><span class="i-text">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="gall-item">
-                                <div class="g-it">
-                                    <a href="#" class="g-top">
-                                        <img src="uploads/gallery/g-2.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="g-bott">
-                                    <div class="g-title"><a href="">Kids Club invites parents and their children from 1 to 7 years</a>
-                                    </div>
-                                    <ul class="i-list">
-                                        <li><span class="i-icon mdi-device-access-time"></span><span class="i-text">September 15, 2014</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-image-photo-camera"></span><span class="i-text">15</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-av-videocam"></span><span class="i-text">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-sm"></div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 ">
-                            <div class="gall-item">
-                                <div class="g-it">
-                                    <a href="#" class="g-top">
-                                        <img src="uploads/gallery/g-3.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="g-bott">
-                                    <div class="g-title"><a href="">Kids Club invites parents and their</a>
-                                    </div>
-                                    <ul class="i-list">
-                                        <li><span class="i-icon mdi-device-access-time"></span><span class="i-text">September 15, 2014</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-image-photo-camera"></span><span class="i-text">15</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-av-videocam"></span><span class="i-text">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-md visible-lg"></div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="gall-item">
-                                <div class="g-it">
-                                    <a href="#" class="g-top">
-                                        <img src="uploads/gallery/g-4.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="g-bott">
-                                    <div class="g-title"><a href="">Kids Club invites parents </a>
-                                    </div>
-                                    <ul class="i-list">
-                                        <li><span class="i-icon mdi-device-access-time"></span><span class="i-text">September 15, 2014</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-image-photo-camera"></span><span class="i-text">15</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-av-videocam"></span><span class="i-text">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-sm"></div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="gall-item">
-                                <div class="g-it">
-                                    <a href="#" class="g-top">
-                                        <img src="uploads/gallery/g-5.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="g-bott">
-                                    <div class="g-title"><a href="">Kids Club invites parents and their children from 1 to 7 years</a>
-                                    </div>
-                                    <ul class="i-list">
-                                        <li><span class="i-icon mdi-device-access-time"></span><span class="i-text">September 15, 2014</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-image-photo-camera"></span><span class="i-text">15</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-av-videocam"></span><span class="i-text">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="gall-item">
-                                <div class="g-it">
-                                    <a href="#" class="g-top">
-                                        <img src="uploads/gallery/g-6.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="g-bott">
-                                    <div class="g-title"><a href="">Kids Club invites parents and their</a>
-                                    </div>
-                                    <ul class="i-list">
-                                        <li><span class="i-icon mdi-device-access-time"></span><span class="i-text">September 15, 2014</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-image-photo-camera"></span><span class="i-text">15</span>
-                                        </li>
-                                        <li><span class="i-icon mdi-av-videocam"></span><span class="i-text">1</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-sm"></div>
-                        <div class="clearfix visible-md visible-lg"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="grow">
-            <div class="container">
-                <div class="grow-inner">
-                    <h2>Growing experience</h2>
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="grow-item">
-                                <div class="grow-count"><span class="grow-d">5</span>
-                                </div>
-                                <span class="rect rect-t grow-rect">
-                           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
-<path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
-</svg>
-                            <span class="mdi-content-content-paste"></span>
-                                </span>
-                                <div class="grow-title">flexible plans</div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="grow-item">
-                                <div class="grow-count"><span class="grow-d">59</span>
-                                </div>
-                                <span class="rect rect-t grow-rect">
-                           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
-<path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
-</svg>
-                            <span class="mdi-social-person"></span>
-                                </span>
-                                <div class="grow-title">professional teachers</div>
-                            </div>
-                        </div>
-                        <div class="clearfix visible-xs"></div>
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="grow-item">
-                                <div class="grow-count"><span class="grow-d">119</span>
-                                </div>
-                                <span class="rect rect-t grow-rect">
-                           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
-<path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
-</svg>
-                            <span class="mdi-image-palette"></span>
-                                </span>
-                                <div class="grow-title">open space for playing and learning</div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="grow-item">
-                                <div class="grow-count">><span class="grow-d">5000</span>
-                                </div>
-                                <span class="rect rect-t grow-rect">
-                           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
-<path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
-</svg>
-                            <span class="mdi-social-school"></span>
-                                </span>
-                                <div class="grow-title">graduates</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
+                </div>
+
+            </div>
+        </section>
         <section class="container sh-block" data-scroll-index="5">
             <h2>Participe de <span class="bq">leilões</span> com <b>suas milhas</b></h2>
             <div class="row sh-inner" id="prod">
             </div>
         </section>
-
-
         <section class="container c-block" data-scroll-index="9">
             <div class="c-block__inner">
                 <h2>Pensando em você</h2>
@@ -478,7 +268,7 @@
                             <span class="mdi-editor-insert-emoticon"></span>
                         </span>
                         <h4>Os participantes ganham mais</h4>
-                        <p>Participe dos sorteios gerando Tickets de participação, e a cada ticket você recebe pontos que podem ser convertidos por milhas aéreas, saldo para leilão de centavos ou ate mesmo troque  por produtos dentro do nosso e-commmerce. Indique novos amigos e turbine suas milhas!</p>
+                        <p>Participe dos sorteios gerando Tickets de participação, e a cada ticket você recebe pontos que podem ser convertidos por milhas aéreas, saldo para leilão de centavos ou ate mesmo troque por produtos dentro do nosso e-commmerce. Indique novos amigos e turbine suas milhas!</p>
                     </div>
                 </div>
             </div>
@@ -494,10 +284,10 @@
                             <div class="a-title">Early Development</div>
                             <span class="rect rect-t a-rect">
                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
+     width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
 <path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
+    c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
+    c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
 </svg>
                             <span class="a-t">$<b>8</b></span>
                             <span class="a-td">per month</span>
@@ -527,10 +317,10 @@
                             <div class="a-title">Early Maturity</div>
                             <span class="rect rect-t a-rect">
                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
+     width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
 <path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
+    c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
+    c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
 </svg>
                             <span class="a-t">$<b>16</b></span>
                             <span class="a-td">per month</span>
@@ -559,10 +349,10 @@
                             <div class="a-title">Preparing for School</div>
                             <span class="rect rect-t a-rect">
                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
+     width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
 <path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
+    c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
+    c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
 </svg>
                             <span class="a-t">$<b>40</b></span>
                             <span class="a-td">per month</span>
@@ -589,10 +379,10 @@
                             <div class="a-title">Early School Classes</div>
                             <span class="rect rect-t a-rect">
                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
+     width="60.795px" height="68.561px" viewBox="0 0 60.795 68.561" enable-background="new 0 0 60.795 68.561" xml:space="preserve">
 <path d="M2.59,53.444c-1.429-0.825-2.595-2.85-2.59-4.5L0.079,19.78c0.004-1.65,1.175-3.678,2.602-4.507L27.898,0.624
-	c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
-	c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
+    c1.427-0.829,3.763-0.833,5.193-0.007l25.114,14.5c1.429,0.826,2.595,2.851,2.59,4.5l-0.079,29.164
+    c-0.004,1.649-1.175,3.678-2.602,4.507L32.897,67.937c-1.428,0.829-3.764,0.832-5.192,0.007L2.59,53.444z"/>
 </svg>
                             <span class="a-t">$<b>119</b></span>
                             <span class="a-td">per month</span>
@@ -676,37 +466,31 @@
                         <hr>
                     </div>
                 </div>
-                <div >
-                        <p>Sempre gostei de participar de sorteios no instagram e agora eu posso controlar meus tickets e conhecer novos sorteios aqui.</p>
-                        <hr>
-                        <div class="sn-image">
-                            <img src="https://instagram.fgig3-1.fna.fbcdn.net/t51.2885-19/s150x150/13108791_1083719875020989_58459970_a.jpg" class="img-circle" alt="">
-                        </div>
-                        <div class="sn-figure">
-                            <div class="sn-name">Lucas Willemen</div>
-                            <div class="sn-descr"><a href="https://instagram.com/lucaswillemen">@lucaswillemen</a></div>
-                        </div>
-
-                    
-                    
-                <button type="button" class="slick-prev" style="display: block;"><span class="mdi-navigation-arrow-back waves-effect waves-effect waves-circle waves-classic"></span></button><button type="button" class="slick-next" style="display: block;"><span class="mdi-navigation-arrow-forward waves-effect waves-circle waves-classic"></span></button>
+                <div>
+                    <p>Sempre gostei de participar de sorteios no instagram e agora eu posso controlar meus tickets e conhecer novos sorteios aqui.</p>
+                    <hr>
+                    <div class="sn-image">
+                        <img src="https://instagram.fgig3-1.fna.fbcdn.net/t51.2885-19/s150x150/13108791_1083719875020989_58459970_a.jpg" class="img-circle" alt="">
+                    </div>
+                    <div class="sn-figure">
+                        <div class="sn-name">Lucas Willemen</div>
+                        <div class="sn-descr"><a href="https://instagram.com/lucaswillemen">@lucaswillemen</a></div>
+                    </div>
+                    <button type="button" class="slick-prev" style="display: block;"><span class="mdi-navigation-arrow-back waves-effect waves-effect waves-circle waves-classic"></span></button><button type="button" class="slick-next" style="display: block;"><span class="mdi-navigation-arrow-forward waves-effect waves-circle waves-classic"></span></button>
                 </div>
             </div>
         </div>
-        
         <footer>
             <div class="footer-top">
                 <div class="container">
                     <div class="row content">
                         <div class="col-xs-12 col-lg-12 col-sm-12 top-item text-center">
                             <form action="http://themes.makebecool.com/demo/themeKidsDemo/#" class="footer-form">
-                            <img src="src/img/logo-sorteio.png" alt="" id="logo" style="    height: 180px;">
+                                <img src="src/img/logo-sorteio.png" alt="" id="logo" style="    height: 180px;">
                                 <p class="title">Acesse sua conta</p>
-                                  <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code"
-                             type="submit" class="btn btn-default " style="background:#125688; color:white">
-                             <i class="fa fa-instagram" style="color:white; font-size:22px"></i> 
-                             Conectar com instagram
-                             </a>
+                                <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code" type="submit" class="btn btn-default " style="background:#125688; color:white">
+                                    <i class="fa fa-instagram" style="color:white; font-size:22px"></i> Conectar com instagram
+                                </a>
                             </form>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-lg-12 top-item text-center">
@@ -729,7 +513,7 @@
             <div class="footer-bottom">
                 <div class="container">
                     <ul class="social col-xs-12">
-                        <li><a href="http://themes.makebecool.com/demo/themeKidsDemo/#" >Termos de uso e privacidade</a>
+                        <li><a href="http://themes.makebecool.com/demo/themeKidsDemo/#">Termos de uso e privacidade</a>
                         </li>
                         <li><a href="https://sorteiosocial.awsapps.com/mail" target="_blank"><span class="fa fa-envelope"></span></a>
                         </li>
@@ -750,91 +534,89 @@
         </footer>
     </div>
     <script src="./site_src_files/jquery-1.11.2.min.js.download"></script>
-<script src="./site_src_files/bootstrap.js.download"></script>
-  <script src="src/js/moment.js"></script>
-  <script src="//cdn.rawgit.com/hilios/jQuery.countdown/2.1.0/dist/jquery.countdown.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
-<script type="text/javascript">
-    socket = io.connect(window.ws)
-    socket.emit("fetch_prod")
-    socket.on("fetch_prod", function(data){
-        console.log(data)
-        window.count = data.length
-        $.each(data, function(k, v){
-            window.count--
-            console.log(window.count)
-            $("#prod").append('<div class="col-sm-6 col-lg-3">'+
-                '<div class="sh-item">'+
-                    '<img src="'+v.data.img+'" class="sh-image">'+
-                    '<h5 class="sh-title">'+v.data.nome+'</h5>'+
-                    '<hr class="sh-hr">'+
-                    '<p class="sh-description">'+v.data.desc+'</p>'+
-                    '<ul class="sh-list">'+
-                    '<div data-countdown="'+moment(v.data.data).format('YYYY/MM/DD')+'"></div>'+
-                    '<a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code">'+
-                    '<button class="btn btn-primary">Dar lance</button></a>'+
-                    '</ul>'+
-                '</div>'+
-            '</div>')
-            if (window.count === 0) {
-                setTimeout(function() {
-                    $('[data-countdown]').each(function() {
-                        var $this = $(this), finalDate = $(this).data('countdown');
-                        $this.countdown(finalDate, function(event) {
-                        $this.html(event.strftime('%D dias %H:%M:%S'));
-                      });
-                    });
-                }, 100);
-            }
+    <script src="./site_src_files/bootstrap.js.download"></script>
+    <script src="src/js/moment.js"></script>
+    <script src="//cdn.rawgit.com/hilios/jQuery.countdown/2.1.0/dist/jquery.countdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <script type="text/javascript">
+        socket = io.connect(window.ws)
+        socket.emit("fetch_prod")
+        socket.on("fetch_prod", function(data) {
+            console.log(data)
+            window.count = data.length
+            $.each(data, function(k, v) {
+                window.count--
+                    console.log(window.count)
+                $("#prod").append('<div class="col-sm-6 col-lg-3">' +
+                    '<div class="sh-item">' +
+                    '<img src="' + v.data.img + '" class="sh-image">' +
+                    '<h5 class="sh-title">' + v.data.nome + '</h5>' +
+                    '<hr class="sh-hr">' +
+                    '<p class="sh-description">' + v.data.desc + '</p>' +
+                    '<ul class="sh-list">' +
+                    '<div data-countdown="' + moment(v.data.data).format('YYYY/MM/DD') + '"></div>' +
+                    '<a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code">' +
+                    '<button class="btn btn-primary">Dar lance</button></a>' +
+                    '</ul>' +
+                    '</div>' +
+                    '</div>')
+                if (window.count === 0) {
+                    setTimeout(function() {
+                        $('[data-countdown]').each(function() {
+                            var $this = $(this),
+                                finalDate = $(this).data('countdown');
+                            $this.countdown(finalDate, function(event) {
+                                $this.html(event.strftime('%D dias %H:%M:%S'));
+                            });
+                        });
+                    }, 100);
+                }
+            })
         })
-    })
-    socket.emit("search_sort")
-    socket.on("search_sort", function(data){
-        console.log(data)
-        window.count = data.length
-        $("#sort1").html('<div class="g-item__inner">'+
-            '<img src="'+data[0].data.img+'" class="g-item__img">'+
-            '<div class="g-item__ttl">'+
-                '<h4>'+data[0].data.titulo+'</h4>'+
-                '<hr class="wrr">'+
-                '<p class="descr">Data do sorteio: '+moment(data[0].data.data).format('DD/MM/YYYY')+'</p>'+
-                '<p class="descr">Tickets participantes: '+data[0].tickets+'</p>'+
-                '<hr>'+
-            '</div>'+
-            '<div class="g-item__descr">'+
-                '<p>'+data[0].output.caption+'</p>'+
-            '</div>'+
-        '</div>')
-        $("#sort2").html('<div class="g-item__inner">'+
-            '<img src="'+data[1].data.img+'" class="g-item__img">'+
-            '<div class="g-item__ttl">'+
-                '<h4>'+data[1].data.titulo+'</h4>'+
-                '<hr class="wrr">'+
-                '<p class="descr">Data do sorteio: '+moment(data[1].data.data).format('DD/MM/YYYY')+'</p>'+
-                '<p class="descr">Tickets participantes: '+data[1].tickets+'</p>'+
-                '<hr>'+
-            '</div>'+
-            '<div class="g-item__descr">'+
-                '<p>'+data[1].output.caption+'</p>'+
-            '</div>'+
-        '</div>')
-        $("#sort3").html('<div class="g-item__inner">'+
-            '<img src="'+data[2].data.img+'" class="g-item__img">'+
-            '<div class="g-item__ttl">'+
-                '<h4>'+data[2].data.titulo+'</h4>'+
-                '<hr class="wrr">'+
-                '<p class="descr">Data do sorteio: '+moment(data[2].data.data).format('DD/MM/YYYY')+'</p>'+
-                '<p class="descr">Tickets participantes: '+data[2].tickets+'</p>'+
-                '<hr>'+
-            '</div>'+
-            '<div class="g-item__descr">'+
-                '<p>'+data[2].output.caption+'</p>'+
-            '</div>'+
-        '</div>')
-    })
-</script>
-
-
-
-
-</body></html>
+        socket.emit("search_sort")
+        socket.on("search_sort", function(data) {
+            console.log(data)
+            window.count = data.length
+            $("#sort1").html('<div class="g-item__inner">' +
+                '<img src="' + data[0].data.img + '" class="g-item__img">' +
+                '<div class="g-item__ttl">' +
+                '<h4>' + data[0].data.titulo + '</h4>' +
+                '<hr class="wrr">' +
+                '<p class="descr">Data do sorteio: ' + moment(data[0].data.data).format('DD/MM/YYYY') + '</p>' +
+                '<p class="descr">Tickets participantes: ' + data[0].tickets + '</p>' +
+                '<hr>' +
+                '</div>' +
+                '<div class="g-item__descr">' +
+                '<p>' + data[0].output.caption + '</p>' +
+                '</div>' +
+                '</div>')
+            $("#sort2").html('<div class="g-item__inner">' +
+                '<img src="' + data[1].data.img + '" class="g-item__img">' +
+                '<div class="g-item__ttl">' +
+                '<h4>' + data[1].data.titulo + '</h4>' +
+                '<hr class="wrr">' +
+                '<p class="descr">Data do sorteio: ' + moment(data[1].data.data).format('DD/MM/YYYY') + '</p>' +
+                '<p class="descr">Tickets participantes: ' + data[1].tickets + '</p>' +
+                '<hr>' +
+                '</div>' +
+                '<div class="g-item__descr">' +
+                '<p>' + data[1].output.caption + '</p>' +
+                '</div>' +
+                '</div>')
+            $("#sort3").html('<div class="g-item__inner">' +
+                '<img src="' + data[2].data.img + '" class="g-item__img">' +
+                '<div class="g-item__ttl">' +
+                '<h4>' + data[2].data.titulo + '</h4>' +
+                '<hr class="wrr">' +
+                '<p class="descr">Data do sorteio: ' + moment(data[2].data.data).format('DD/MM/YYYY') + '</p>' +
+                '<p class="descr">Tickets participantes: ' + data[2].tickets + '</p>' +
+                '<hr>' +
+                '</div>' +
+                '<div class="g-item__descr">' +
+                '<p>' + data[2].output.caption + '</p>' +
+                '</div>' +
+                '</div>')
+        })
+    </script>
+</body>
+</html>
