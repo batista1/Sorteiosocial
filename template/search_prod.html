@@ -39,7 +39,7 @@
                 <p class="md-title" style="font-weight: 500; text-transform: uppercase; font: 500 16px/22px 'Roboto',sans-serif;">{{c.data.titulo}}</p>
                 <div layout="row">
                     <div layout="column">
-                    <h2>{{c.data.nome}}</h2>
+                    <h3>{{c.data.nome}}</h3>
                         <span class="md-caption"><md-icon md-svg-icon="calendar"></md-icon>Encerramento: <timer countdown="get_data(c.data.data)" max-time-unit="'day'" interval="1000">{{days}} dias - {{hhours}}:{{mminutes}}:{{sseconds}}</timer></span>
                         <span ng-if="c.last_user.name" class="md-caption"><md-icon md-svg-icon="account"></md-icon>Último lance: <b>@{{c.last_user.name}}</b> </span>
                         <span ng-if="c.last_user.name" class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Valor: {{c.lances/100 | currency: "R$ "}} </span>
