@@ -40,8 +40,9 @@
                 <div layout="row">
                     <div layout="column">
                         <span class="md-caption"><md-icon md-svg-icon="calendar"></md-icon>Encerramento: <timer countdown="get_data(c.data.data)" max-time-unit="'day'" interval="1000">{{days}} dias - {{hhours}}:{{mminutes}}:{{sseconds}}</timer></span>
-                        <span class="md-caption"><md-icon md-svg-icon="account"></md-icon>Último lance: <b>@{{c.last_user.name}}</b> </span>
-                        <span class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Valor: {{c.lances/100 | currency: "R$ "}} </span>
+                        <span ng-if="c.last_user.name" class="md-caption"><md-icon md-svg-icon="account"></md-icon>Último lance: <b>@{{c.last_user.name}}</b> </span>
+                        <span ng-if="c.last_user.name" class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Valor: {{c.lances/100 | currency: "R$ "}} </span>
+                        <span ng-if="!c.last_user.name" class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Seja o primeiro a dar um lance </span>
                         
                     </div>
                 </div>
