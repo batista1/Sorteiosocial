@@ -13,7 +13,6 @@
         margin: 0 auto;
     }
 </style>
-
 <div class="page-err" ng-show="cards.length==0">
     <div class="err-container">
         <div class="text-center">
@@ -41,10 +40,9 @@
                     <div layout="column">
                     <h3>{{c.data.nome}}</h3>
                         <span class="md-caption"><md-icon md-svg-icon="calendar"></md-icon>Encerramento: <timer countdown="get_data(c.data.data)" max-time-unit="'day'" interval="1000">{{days}} dias - {{hhours}}:{{mminutes}}:{{sseconds}}</timer></span>
-                        <span ng-if="c.last_user.name" class="md-caption"><md-icon md-svg-icon="account"></md-icon>Último lance: <b>@{{c.last_user.name}}</b> </span>
+                        <span ng-if="c.last_user.name" class="md-caption"><md-icon md-svg-icon="account"></md-icon>Último lance: <b><a target="_blank" href="https://instagram.com/{{c.last_user.name}}">@{{c.last_user.name}}</a> </b> </span>
                         <span ng-if="c.last_user.name" class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Valor: {{c.lances/100 | currency: "R$ "}} </span>
                         <span ng-if="!c.last_user.name" class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Seja o primeiro a dar um lance </span>
-                        
                     </div>
                 </div>
             </div>

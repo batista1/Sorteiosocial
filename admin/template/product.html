@@ -7,8 +7,8 @@
 	<div layout-padding>
 		<h3>{{card.data.nome}}</h3>
 		<p>Vencimento: {{card.data.data | date: "dd/MM/yyyy"}} </p>
-		<p>Lances: 0 </p>
-		<p>Último lance: Ainda não recebeu lances nesse produto. </p>
+		<p ng-if="card.last_user.name">Lances: {{card.lances}} </p>
+		<p ng-if="card.last_user.name">Último lance: <a target="_blank" href="https://instagram.com/{{card.last_user.name}}">@{{card.last_user.name}}</a>  </p>
 	</div>
 	</md-card>
 </div>

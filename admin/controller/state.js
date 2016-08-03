@@ -51,7 +51,7 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
     url: "/product",
     views: {
         //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
-        "root": { templateUrl: "template/product.html?asa"+ window.version,controller: "product"}
+        "root": { templateUrl: "template/product.html?assa"+ window.version,controller: "product"}
        }
   })
   .state('app.add_product', {
