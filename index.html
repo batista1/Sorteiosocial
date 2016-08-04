@@ -63,6 +63,12 @@
     }
     .slider-wrap2{
         display: none!important;
+    }    
+    .hide{
+        display: none!important;
+    }
+    .show{
+        display: block!important;
     }
 }
 .sn-image img {
@@ -126,8 +132,8 @@
                         <div class="slider-item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 1583px;"></div>
                         <div class="slider-item slick-slide slick-active" data-slick-index="0" aria-hidden="false" style="width: 1583px;">
                             <img src="./site_src_files/back-1.jpg" alt="" class="back">
-                            <div class="slider-title"><b class="up">Participe de</b> sorteios
-                                <br> <b>&amp;</b> ganhe <b class="bottom">pontos</b>
+                            <div class="slider-title"><b class="">Participe de</b> sorteios
+                                <br> <b>&amp;</b> ganhe <b class="">pontos</b>
                             </div>
                             <div class="container" style="margin-left: 0px;">
                                 <div class="slider-descr">
@@ -146,8 +152,8 @@
         </div>
         <div class="slider-wrap2"><br><br><br><br><br><br>
             
-                            <div class="slider-title" style="    text-align: center;"><b class="up">Participe de</b> sorteios
-                                <br> <b>&amp;</b> ganhe <b class="bottom">pontos</b>
+                            <div class="slider-title" style="    text-align: center;"><b class="">Participe de</b> sorteios
+                                <br> <b>&amp;</b> ganhe <b class="">pontos</b>
                             </div>
         </div>
         <div class="in-block" data-scroll-index="1">
@@ -202,13 +208,15 @@
         </div>
         <section class="container bg-bl" data-scroll-index="2" id="bg-bl">
             <div class="bg-block bg-oranges">
-                <h2>Acesse sua conta  <span class="bottom">com 1 clique</span></h2>
+                <h2>Acesse sua conta  <span class="">com 1 clique</span></h2>
                 <form action="http://themes.makebecool.com/demo/themeKidsDemo/#" class="form">
                     <p class="form-text">Acesse sua conta pelo instagram e veja todos os sorteios que você já está participando e controle suas milhas</span>
                     </p>
 
                     <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code" type="submit" class="btn btn-default btn-lg btn-block" style="background:#125688; color:white">
-                        <i class="fa fa-instagram" style="color:white; font-size:22px"></i> Conectar com instagram
+                        <i class="fa fa-instagram" style="color:white; font-size:22px"></i> 
+                        <span class="hide">Conectar com instagram</span>
+                        <span class="show" style="display:none">Entrar</span>
                     </a>
                 </form>
             </div>
