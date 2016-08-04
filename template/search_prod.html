@@ -46,7 +46,8 @@
                     </div>
                 </div>
             </div>
-            <md-button class="md-raised md-primary" ng-click="make_lance(c._id)">Dar Lance</md-button>
+            <md-button class="md-raised md-primary" ng-click="make_lance(c._id)" ng-disabled="user.points<=0">Dar Lance</md-button>
         </md-card>
+        {{user.points}}
     </div>
 </div>

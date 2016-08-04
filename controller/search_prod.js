@@ -10,6 +10,8 @@ app.controller('search_prod', function($scope, $rootScope, $localStorage) {
         var time = new Date(date).getTime() / 1000 - new Date().getTime() / 1000
         return time
     }
+
+    $scope.user = $localStorage.user
     // 1st ngRepeat demo
     $scope.slides = []
     $rootScope.socket.emit("fetch_prod", $localStorage.user._id)
