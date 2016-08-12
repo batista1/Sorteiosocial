@@ -65,7 +65,7 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
     url: "/faq",
     views: {
         //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
-        "root": { templateUrl: "template/faq.html?a"+ window.version,controller: "faq"}
+        "root": { templateUrl: "template/faq.html?sa"+ window.version,controller: "faq"}
        }
   })
   .state('app.depoimentos', {

@@ -11,17 +11,13 @@
    <form name="faq" ng-submit="save()" >
    <div layout-padding>
             <md-input-container class="md-block" layout-align="center end">
-                <input ng-model="data.pergunta" type="text" placeholder="Pergunta" autofocus name="pergunta" required>
+                <input ng-model="data.pergunta" type="text" placeholder="Pergunta" name="pergunta" required>
                 <div ng-messages="faq.pergunta.$error">
                     <div ng-message="required">Informe sua pergunta.</div>
                 </div>
             </md-input-container>
-            <md-input-container class="md-block" layout-align="center end">
-                <textarea ng-model="data.resposta" type="text" placeholder="Resposta" name="resposta" required></textarea>
-                <div ng-messages="faq.resposta.$error">
-                    <div ng-message="required">Informe a resposta.</div>
-                </div>
-            </md-input-container>
+            <div text-angular ng-model="data.resposta" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+            
             
         </div>
         </md-content>
