@@ -1,0 +1,40 @@
+<md-dialog flex-xs="95" flex-sm="80" flex-md="60" flex-lg="60">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Inserir novo FAQ</h2>
+            <span flex></span>
+            <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon md-svg-icon="close">
+            </md-button>
+        </div>
+    </md-toolbar>
+   <form name="faq" ng-submit="save()" >
+   <div layout-padding>
+            <md-input-container class="md-block" layout-align="center end">
+                <input ng-model="data.pergunta" type="text" placeholder="Pergunta" autofocus name="pergunta" required>
+                <div ng-messages="faq.pergunta.$error">
+                    <div ng-message="required">Informe sua pergunta.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="md-block" layout-align="center end">
+                <textarea ng-model="data.resposta" type="text" placeholder="Resposta" autofocus name="resposta" required></textarea>
+                <div ng-messages="faq.resposta.$error">
+                    <div ng-message="required">Informe a resposta.</div>
+                </div>
+            </md-input-container>
+            
+        </div>
+        </md-content>
+        <md-dialog-actions layout="row">
+            <md-button class="" type='button' ng-click="cancel()">
+            Fechar
+                
+            </md-button>
+            <span flex></span>
+            <md-progress-circular md-mode="indeterminate" ng-show="formUpdate.$submitted" md-diameter="20"></md-progress-circular>
+            <md-button class="md-primary md-raised" type="submit" ng-disabled="formUpdate.$invalid || formUpdate.$submitted">
+                Salvar
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

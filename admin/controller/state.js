@@ -61,6 +61,20 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
         "root": { templateUrl: "template/add_product.html?"+ window.version,controller: "add_product"}
        }
   })
+  .state('app.faq', {
+    url: "/faq",
+    views: {
+        //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
+        "root": { templateUrl: "template/faq.html?a"+ window.version,controller: "faq"}
+       }
+  })
+  .state('app.depoimentos', {
+    url: "/depoimentos",
+    views: {
+        //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
+        "root": { templateUrl: "template/depoimentos.html?"+ window.version,controller: "depoimentos"}
+       }
+  })
   .state('app.config', {
     url: "/config",
     views: {

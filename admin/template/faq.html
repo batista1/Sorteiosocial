@@ -1,0 +1,12 @@
+<div layout="row" flex>
+<md-button ng-click="bnt_new()" class="md-primary md-raised md-block">Cadastrar novo FAQ</md-button>
+</div>
+<div ng-repeat="card in card">
+	<md-card layout-padding>
+	<div layout="row"> 
+	<b>{{card.pergunta}}</b><span flex></span>
+        <md-icon ng-click="delete_faq(card, $index)" md-svg-icon="close"></md-icon>
+      </div>
+	<p>{{card.resposta}}</p>
+	</md-card>
+</div>

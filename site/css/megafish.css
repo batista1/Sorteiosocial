@@ -1,0 +1,68 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sf-menu .sf-mega {
+  position: absolute;
+  display: none;
+}
+.sf-menu > li {
+  float: left;
+}
+.sf-menu li:hover > .sf-mega,
+.sf-menu li.sfHover > .sf-mega {
+  display: block;
+}
+
+.sf-menu > li > a {
+  display: block;
+  position: relative;
+}
+
+
+/*** DEMO SKIN ***/
+.sf-menu {
+  float: left;
+  width: 100%;
+}
+.sf-menu .sf-mega {
+  
+  /*width: 100%;  allow long menu items to determine submenu width */
+}
+.sf-menu > li > a {
+  
+}
+.sf-menu > li {
+  
+}
+.sf-menu > li:hover,
+.sf-menu > li.sfHover {
+  
+}
+
+/*** mega menu dropdown ***/
+.sf-mega {
+  
+  /*width: 100%;*/
+}
+.sf-mega-section {
+  float: left;
+  
+}
+
+
+/*** arrows (for all except IE7) **/
+.sf-arrows .sf-with-ul {
+  
+}
+/* styling for both css and generated arrows */
+.sf-arrows .sf-with-ul:after {
+  
+}
+.sf-arrows > li > .sf-with-ul:focus:after,
+.sf-arrows > li:hover > .sf-with-ul:after,
+.sf-arrows > .sfHover > .sf-with-ul:after {
+}
