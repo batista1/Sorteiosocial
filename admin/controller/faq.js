@@ -10,6 +10,7 @@ app.controller('faq', function($scope, $rootScope, $mdDialog){
             	$scope.save = function(){
             		console.log($scope.data)
             		$rootScope.socket.emit("faq_save", $scope.data)
+            		$scope.cancel = function(){ $mdDialog.cancel()}
             	}   
             }
         })
