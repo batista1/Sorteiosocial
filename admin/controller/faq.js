@@ -16,6 +16,7 @@ app.controller('faq', function($scope, $rootScope, $mdDialog){
     }	            
 	$rootScope.socket.on("faq_save", function(res){
 		$mdDialog.cancel()
+		console.log(res)
 		$scope.card.push(res)
 	})
     $rootScope.socket.emit("faq_load")
