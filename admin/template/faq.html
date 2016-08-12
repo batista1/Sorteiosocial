@@ -5,7 +5,7 @@
 	<md-card layout-padding>
 	<div layout="row"> 
 	<b>{{c.pergunta}}</b><span flex></span>
-        <md-icon ng-click="delete_faq(c, $index)" md-svg-icon="close"></md-icon>
+        <md-icon ng-click="bnt_edit(c)" md-svg-icon="pen"></md-icon>
         <md-icon ng-click="delete_faq(c, $index)" md-svg-icon="close"></md-icon>
       </div>
       <div ng-bind-html="c.resposta">

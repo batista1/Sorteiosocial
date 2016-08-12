@@ -8,8 +8,8 @@
             </md-button>
         </div>
     </md-toolbar>
-   <form name="faq" ng-submit="save()" >
-   <div layout-padding>
+    <form name="faq" ng-submit="save()">
+        <div layout-padding>
             <md-input-container class="md-block" layout-align="center end">
                 <input ng-model="data.pergunta" type="text" placeholder="Pergunta" name="pergunta" required>
                 <div ng-messages="faq.pergunta.$error">
@@ -17,14 +17,11 @@
                 </div>
             </md-input-container>
             <div text-angular ng-model="data.resposta" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
-            
-            
         </div>
         </md-content>
         <md-dialog-actions layout="row">
             <md-button class="" type='button' ng-click="cancel()">
-            Fechar
-                
+                Fechar
             </md-button>
             <span flex></span>
             <md-progress-circular md-mode="indeterminate" ng-show="formUpdate.$submitted" md-diameter="20"></md-progress-circular>
