@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,70 +75,7 @@
 <body class="">
 
     <div class="main-container">
-
-        <header class="kopa-page-header-1">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-md-2 col-sm-6 col-xs-6 text-left">
-                        <!-- hamburger-menu -->
-                        <div class="hamburger-menu">
-                            <span class="ti-menu"></span>
-                        </div>
-
-
-                        <div class="kopa-logo">
-                            <a href="#">
-                                <img src="images/header/logo.png" alt="">
-                            </a>
-                        </div>
-                        <!-- logo -->
-
-                    </div>
-                    <!-- col-md-2 -->
-
-                    <div class="col-md-8 col-sm-0 col-xs-0">
-
-                        <nav class="main-nav">
-
-                            <ul class="main-menu sf-menu">
-                                <li class="current-menu-item">
-                                    <a href="index.html">Home</a>
-
-                                </li>
-                                <li>
-                                    <a href="faq.html">Perguntas e respostas</a>
-
-                                </li>
-                                <li>
-                                    <a href="sorteios.html">Sorteios</a>
-
-                                </li>
-
-                                <li>
-                                    <a href="contato.html">Contato</a>
-
-                                </li>
-                                <li>
-                                    <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code">Entrar</a>
-                                </li>
-
-                            </ul>
-
-                        </nav>
-                        <!-- main-nav -->
-
-                    </div>
-                    <!-- col-md-8 -->
-
-                </div>
-                <!-- row -->
-
-            </div>
-
-        </header>
+    <?php include 'site/includes/menu.html'; ?>
         <!-- kopa-page-header-1 -->
 
         <div id="main-content">
@@ -266,7 +202,7 @@
             </section>
             <!-- kopa-area-1 -->
 
-            
+
 
             <section class="kopa-area kopa-area-3">
 
@@ -463,177 +399,13 @@
         </div>
         <!-- main-content -->
 
-        <div class="bottom-sidebar kopa-area white-text-style style-01">
-
-            <div class="kopa-area-tg-4">
-                <span></span>
-            </div>
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-
-                        <div class="widget reading-module-intro-2">
-                            <div class="widget-content">
-                                <a href="#"><img src="images/header/logo.png" alt=""></a>
-                                <p>This is Photoshop's version of Lorem ain gravida nibh vel velit ctor aliquet. an itudin, lorem quis bibendum auctoisi elit</p>
-                                <p>Duis sed odio sit amet nibh vulputate us a sit amet mauris. Morbi accumsan .
-                                </p>
-                                <div class="kopa-social-links style-02">
-                                    <ul class="clearfix">
-                                        <li>
-                                            <a href="https://fb.me/sorteiosocial" target="_blank" class="fa fa-facebook"></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://instagram.com/sorteiosocial" target="_blank" class="fa fa-instagram"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- widget -->
-
-                    </div>
-                    <!-- col-md-3 --><br><br><br><br>
-
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-
-                        <div class="widget widget_nav_menu ct-widget-1">
-                            <h3 class="widget-title style-04">Mapa<span>menus</span></h3>
-                            <ul class="clearfix">
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="faq.html">Perguntas e respostas</a>
-                                </li>
-                                <li>
-                                    <a href="sorteios.html">Todos os sorteios</a>
-                                </li>
-                                <li>
-                                    <a href="contato.html">Contato</a>
-                                </li>
-                                <li>
-                                    <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code">Acesse sua conta</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- widget -->
-
-                    </div>
-                    <!-- col-md-3 -->
-
-                </div>
-                <!-- row -->
-
-            </div>
-            <!-- container -->
-
-        </div>
-        <!-- bottom-sidebar -->
-
-        <footer class="kopa-footer">
-            <div class="container">
-                <div class="kopa-pull-left">
-                    <p class="copyright">&copy; 2016 by <a href="#">vCorp</a></p>
-                </div>
-                <div class="kopa-pull-right">
-                    <ul class="clearfix">
-                        <li>
-                            <a href="#"><img src="images/p8/2.png" alt=""></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/p8/3.png" alt=""></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- container -->
-        </footer>
-
-        <a href="#" class="scroll-up"><span class="ti-arrow-up"></span></a>
-
-    </div>
-    <!-- main-container -->
-
-    <div class="body-overlay"></div>
-
-    <div class="body-background"></div>
-
-    <section class="slide-area">
-
-        <div class="close-btn">
-            <span class="close-icon ti-close"></span>
-        </div>
-
-        <div class="slide-container">
-
-            <nav class="slide-nav">
-                <h3 class="ct-title-1">
-                    Menu
-                </h3>
-                <ul class="slide-menu">
-                    <li class="current-menu-item">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="faq.html">Perguntas e respostas</a>
-                    </li>
-                    <li>
-                        <a href="sorteios.html">Todos os sorteios</a>
-                    </li>
-                    <li>
-                        <a href="contato.html">Contato</a>
-                    </li>
-                    <li>
-                        <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code">Acesse sua cota</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- slide-nav -->
-
-
-            <nav class="mobile-nav">
-                <ul class="mobile-menu">
-                    <li class="current-menu-item">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="faq.html">Perguntas e respostas</a>
-                    </li>
-                    <li>
-                        <a href="sorteios.html">Todos os sorteios</a>
-                    </li>
-                    <li>
-                        <a href="contato.html">Contato</a>
-                    </li>
-                    <li>
-                        <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code">Acesse sua cota</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- mmobile-nav -->
-
-            <div class="kopa-social-links style-01">
-                <ul class="clearfix">
-                    <li>
-                        <a href="https://fb.me/sorteiosocial" target="_blank" class="fa fa-facebook"></a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com/sorteiosocial" target="_blank" class="fa fa-instagram"></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- social-links -->
-
-        </div>
+       <?php include 'site/includes/footer.html'; ?>
 
     </section>
     <!-- slide-area -->
 
 
+    </div>
 
 
     <script src="site/js/jquery-1.12.4.min.js"></script>
@@ -781,9 +553,6 @@
             }
         })
     </script>
-
-
-
 
 
 
