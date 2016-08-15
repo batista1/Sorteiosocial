@@ -3,8 +3,8 @@ app.controller('depoimentos', function($scope, $rootScope, $mdDialog){
 
 
 	AWS.config.update({
-	    accessKeyId: 'AKIAI53O74F3ANQJGKTQ',
-	    secretAccessKey: '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'
+	    accessKeyId: 'AKIAIFPCZJC6ILQAAOZA',
+	    secretAccessKey: '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'
 	});
 	AWS.config.region = 'sa-east-1';
 
@@ -27,7 +27,7 @@ app.controller('depoimentos', function($scope, $rootScope, $mdDialog){
 				$scope.bucket = new AWS.S3({
 				    region: 'sa-east-1',
 				    params: {
-				        Bucket: 'vstorage.com.br'
+				        Bucket: 'sorteiosocial'
 				    }
 				})
 
