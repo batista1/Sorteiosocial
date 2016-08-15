@@ -2,11 +2,7 @@ app.controller('parceiros', function($scope, $rootScope, $mdDialog){
     $scope.data = {}
 
 
-    AWS.config.update({
-        accessKeyId: 'AKIAI53O74F3ANQJGKTQ',
-        secretAccessKey: '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'
-    });
-    AWS.config.region = 'sa-east-1';
+   
 
 
     $scope.card = []
@@ -24,12 +20,6 @@ app.controller('parceiros', function($scope, $rootScope, $mdDialog){
                 $scope.cancel = function(){ $mdDialog.cancel()}
 
 
-                $scope.bucket = new AWS.S3({
-                    region: 'sa-east-1',
-                    params: {
-                        Bucket: 'vstorage.com.br'
-                    }
-                })
 
 
                 $scope.pre_files = []
@@ -39,11 +29,12 @@ app.controller('parceiros', function($scope, $rootScope, $mdDialog){
                     angular.forEach(file, function(file, k) {
                         $scope.count++
                             $scope.$apply()
-                        $scope.bucket.upload({
+                        $rootScope.bucket.upload({
                             Key: 'sorteiosocial/Sorteio-Social' + new Date().getTime() + '-' + file.name,
                             ContentType: file.type,
                             Body: file
                         }, function(err, data) {
+                            console.log(err)
                             $scope.img = data.Location
                             console.log($scope.img)
                             $scope.show_img = true

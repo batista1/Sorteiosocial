@@ -27,7 +27,16 @@ app.controller('Main', function(
     //Variáveis
     //$rootScope.socket = io.connect(window.ws)    
 
- 
+  AWS.config.update({
+        accessKeyId: 'AKIAJZGS3BXZVY6TB7ZQ',
+        secretAccessKey: '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'
+    });
+    $rootScope.bucket = new AWS.S3({
+        region: 'sa-east-1',
+        params: {
+            Bucket: 'sorteiosocial'
+        }
+    })
 
 
 });

@@ -483,20 +483,20 @@ jQuery(document).ready(function() {
                 messages: {
                     name: {
                         required: "Please enter your name.",
-                        minlength: jQuery.format("At least {0} characters required.")
+                        minlength: jQuery.format("Seu nome com mais de {0} letras.")
                     },
                     email: {
-                        required: "Please enter your email.",
-                        email: "Please enter a valid email."
+                        required: "Informe um email válido.",
+                        email: "Informe um email válido."
                     },
                     message: {
-                        required: "Please enter a message.",
-                        minlength: jQuery.format("At least {0} characters required.")
+                        required: "Escreva sua mensagem.",
+                        minlength: jQuery.format("Mensagem muito curta.")
                     }
                 },
                 // Use Ajax to send everything to processForm.php
                 submitHandler: function(form) {
-                    jQuery(".ct-submit-1").attr("value", "Sending...");
+                    jQuery(".ct-submit-1").attr("value", "Enviando...");
                     jQuery(form).ajaxSubmit({
                         success: function(responseText, statusText, xhr, jQueryform) {
                             jQuery("#response-1").html(responseText).hide().slideDown("fast");

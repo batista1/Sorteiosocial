@@ -2,11 +2,6 @@ app.controller('depoimentos', function($scope, $rootScope, $mdDialog){
 	$scope.data = {}
 
 
-	AWS.config.update({
-	    accessKeyId: 'AKIAIFPCZJC6ILQAAOZA',
-	    secretAccessKey: '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'
-	});
-	AWS.config.region = 'sa-east-1';
 
 
 	$scope.card = []
@@ -24,14 +19,6 @@ app.controller('depoimentos', function($scope, $rootScope, $mdDialog){
             	$scope.cancel = function(){ $mdDialog.cancel()}
 
 
-				$scope.bucket = new AWS.S3({
-				    region: 'sa-east-1',
-				    params: {
-				        Bucket: 'sorteiosocial'
-				    }
-				})
-
-
             	$scope.pre_files = []
 			    $scope.file_changed = function(element) {
 			        var file = element.files
@@ -39,7 +26,7 @@ app.controller('depoimentos', function($scope, $rootScope, $mdDialog){
 			        angular.forEach(file, function(file, k) {
 			            $scope.count++
 			                $scope.$apply()
-			            $scope.bucket.upload({
+			            $rootScope.bucket.upload({
 			                Key: 'sorteiosocial/Sorteio-Social' + new Date().getTime() + '-' + file.name,
 			                ContentType: file.type,
 			                Body: file
