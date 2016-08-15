@@ -1,0 +1,14 @@
+<div layout="row" flex>
+<md-button ng-click="bnt_new()" class="md-primary md-raised md-block">Cadastrar novo parceiro</md-button>
+</div>
+<div ng-repeat="card in card">
+	<md-card layout-padding layout="row">
+	<img ng-src="{{card.img}}" style="max-width:200px; max-height:200px">
+	<div layout="column" flex>
+	<div layout="row" > 
+	<b>{{card.nome}}</b><span flex></span>
+        <md-icon ng-click="delete_parceiros(card, $index)" md-svg-icon="close"></md-icon>
+      </div>
+	<p>{{card.texto}}</p>
+	</md-card>
+</div>

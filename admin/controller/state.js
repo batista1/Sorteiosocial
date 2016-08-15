@@ -75,6 +75,13 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
         "root": { templateUrl: "template/depoimentos.html?"+ window.version,controller: "depoimentos"}
        }
   })
+  .state('app.parceiros', {
+    url: "/parceiros",
+    views: {
+        //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
+        "root": { templateUrl: "template/parceiros.html?"+ window.version,controller: "parceiros"}
+       }
+  })
   .state('app.config', {
     url: "/config",
     views: {

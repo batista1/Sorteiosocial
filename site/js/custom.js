@@ -262,17 +262,7 @@ jQuery(document).ready(function() {
 /*_____________ Owl Carousel _____________*/
 
 
-    var owl_1 = jQuery('.owl-carousel-1');
-    if(owl_1.length){
-        owl_1.owlCarousel({
-            singleItem: true,
-            slideSpeed: 1000,
-            autoPlay: true,
-            navigation: true,
-            pagination: false,
-            navigationText: false
-        });
-    }
+  
 
     var owl_2 = jQuery('.owl-carousel-2');
     if(owl_2.length){
