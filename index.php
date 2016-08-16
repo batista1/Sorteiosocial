@@ -102,29 +102,30 @@
                                  <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.15s">l</span>
                                  <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.2s">i</span>
                                  <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.25s">f</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.3s">c</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.35s">a</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.4s">d</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.45s">a</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.5s">&nbsp;</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.55s">d</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.6s">e</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.65s">&nbsp;</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.7s">s</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.75s">o</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.8s">r</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.85s">t</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.9s">e</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.95s">i</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2s">o</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.05s">s</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.1s">&nbsp;</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.15s">o</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.2s">n</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.25s">l</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.3s">i</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.35s">n</span>
-                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.4s">e</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.3s">i</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.35s">c</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.4s">a</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.45s">d</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.5s">a</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.55s">&nbsp;</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.6s">d</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.65s">e</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.7s">&nbsp;</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.75s">s</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.8s">o</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.85s">r</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.9s">t</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="1.95s">e</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2s">i</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.05s">o</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.1s">s</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.15s">&nbsp;</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.2s">o</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.25s">n</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.3s">l</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.35s">i</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.4s">n</span>
+                                 <span class="wow fadeInRight" data-wow-duration="0.4s" data-wow-delay="2.45s">e</span>
                               </div>
                            </div>
                         </div>
