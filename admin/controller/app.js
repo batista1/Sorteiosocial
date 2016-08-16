@@ -28,8 +28,8 @@ app.controller('Main', function(
     //$rootScope.socket = io.connect(window.ws)    
 
   AWS.config.update({
-        accessKeyId: 'AKIAJZGS3BXZVY6TB7ZQ',
-        secretAccessKey: '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'
+        accessKeyId: 'AKIAJ5BT5SOZJ2O2ZFTQ',
+        secretAccessKey: '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'
     });
     $rootScope.bucket = new AWS.S3({
         region: 'sa-east-1',
