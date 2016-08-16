@@ -154,7 +154,6 @@
     <script src="site/js/owl.carousel.min.js"></script>
     <script src="site/js/jquery.sliderPro.min.js"></script>
     <script src="site/js/jquery.validate.min.js"></script>
-    <script src="site/js/jquery-ui.min.js"></script>
     <script src="site/js/jquery.matchHeight-min.js"></script>
     <script src="site/js/jquery.wow.js"></script>
 	<script src="site/js/custom.js" charset="utf-8"></script>
