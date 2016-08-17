@@ -16,10 +16,11 @@ $result = curl_exec($curl);   // to perform the curl session
 curl_close($curl);   // to close the curl session
 
 $user_data = json_decode($result,true);
+print_r($result);
 ?>
 
 <script type="text/javascript">
     localStorage.login = '<?php echo $result;?>'
     console.log(localStorage.login)
-    location.href = 'app.html#/autologin'
+    //location.href = 'app.html#/autologin'
 </script>
