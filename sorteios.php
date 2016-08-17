@@ -223,10 +223,6 @@
                     '</footer>'+
 
                      '</article>' +
-                     '<div class="badge-icon-1 style-01">' +
-                     'Leilão' +
-                     '<span></span>' +
-                     '</div>' +
                      '</div>')
              })
          })
