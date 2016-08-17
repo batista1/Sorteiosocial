@@ -142,13 +142,11 @@
                                  <div class="widget-content">
                                     <h3>Acesse sua conta pelo instagram</h3>
                                     <div class="search-box-1">
-                                       <form action="#" class="search-form-1" method="get">
                                           <a href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code">
                                           <button type="submit" class="search-submit kopa-btn-4">
                                           <i class="fa fa-instagram"></i>
                                           Entrar
                                           </button></a>
-                                       </form>
                                     </div>
                                     <!--search-box-->
                                  </div>
