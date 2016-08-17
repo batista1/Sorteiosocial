@@ -44,7 +44,7 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
     url: "/adverts",
     views: {
         //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
-        "root": { templateUrl: "template/adverts.html?"+ window.version,controller: "adverts"}
+        "root": { templateUrl: "template/adverts.html?da"+ window.version,controller: "adverts"}
        }
   })
   .state('app.product', {

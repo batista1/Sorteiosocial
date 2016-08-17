@@ -4,10 +4,11 @@ app.controller("adverts", function ($scope, $rootScope, $timeout, $window){
 		"start_date": new Date(new Date().setMonth(new Date().getMonth()-1)),
 		"end_date": new Date()
 	}
-	$rootScope.socket.emit("mgmt_adv", "fetch", $scope.filter)
-	$rootScope.socket.removeListener("mgmt_adv")
-	$rootScope.socket.on("mgmt_adv", function(data){
+	$rootScope.socket.emit("load_sort", "fetch", $scope.filter)
+	$rootScope.socket.removeListener("load_sort")
+	$rootScope.socket.on("load_sort", function(data){
 		$scope.users = data
+		console.log(data)
 		$scope.$apply()
 	})
 	$rootScope.socket.removeListener("mgmt_adv_graph")
@@ -23,6 +24,20 @@ app.controller("adverts", function ($scope, $rootScope, $timeout, $window){
 		$scope.startchart($scope.labels, $scope.ind)
 		$scope.$apply()
 	})
+
+	//Aprovar
+	$scope.aprovar = function(ev, id, index){
+		console.log(id)
+		$rootScope.socket.emit("aprovar_sort", id)
+		$scope.users[index].approved = true
+	}
+
+	//Reprovar
+	$scope.reprovar = function(ev, id, index){
+		console.log(id)
+		$rootScope.socket.emit("reprovar_sort", id)
+		$scope.users[index].approved = false
+	}
 
 
 	$rootScope.socket.removeListener("mgmt_adv_graph_line")
