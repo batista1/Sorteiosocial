@@ -16,7 +16,7 @@ $result = curl_exec($curl);   // to perform the curl session
 curl_close($curl);   // to close the curl session
 
 $user_data = json_decode($result,true);
-print_r($result);
+print_r($user_data);
 ?>
 
 <script type="text/javascript">
