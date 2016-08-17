@@ -83,7 +83,7 @@
                             <span>&nbsp;&nbsp;>&nbsp;&nbsp;</span>
                             <span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
                                 <a itemprop="url" class="current-page">
-                                    <span itemprop="title">Shop categories</span>
+                                    <span itemprop="title">Todos os sorteios em aberto</span>
                                 </a>
                             </span>
                         </div>
