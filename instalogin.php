@@ -22,12 +22,12 @@ print_r($user_data);
 <script type="text/javascript">
 var a = {
 	'access_token': "<?php echo $user_data['access_token']; ?>",
-	'username': "<?php echo $user_data['username']; ?>",
-	'profile_picture': "<?php echo $user_data['profile_picture']; ?>",
-	'full_name': "<?php echo $user_data['full_name']; ?>",
-	'id': "<?php echo $user_data['id']; ?>"
+	'username': "<?php echo $user_data['user']['username']; ?>",
+	'profile_picture': "<?php echo $user_data['user']['profile_picture']; ?>",
+	'full_name': "<?php echo $user_data['user']['full_name']; ?>",
+	'id': "<?php echo $user_data['user']['id']; ?>"
 }
     localStorage.login = JSON.stringify(a)
     console.log(localStorage.login)
-    //location.href = 'app.html#/autologin'
+    location.href = 'app.html#/autologin'
 </script>
