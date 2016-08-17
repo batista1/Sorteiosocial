@@ -21,7 +21,7 @@ print_r($user_data);
 
 <script type="text/javascript">
 var a = {
-	'access_token': <?php echo $user_data['access_token']; ?>,
+	'access_token': "<?php echo $user_data['access_token']; ?>",
 	'username': <?php echo $user_data['username']; ?>,
 	'profile_picture': <?php echo $user_data['profile_picture']; ?>,
 	'full_name': <?php echo $user_data['full_name']; ?>,
