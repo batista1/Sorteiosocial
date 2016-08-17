@@ -271,10 +271,10 @@
                                  <h5>Baixe aqui</h5>
                                  <ul>
                                     <li>
-                                       <a href="#"><img src="images/p5/1.png" alt=""></a>
+                                       <a ><img src="images/p5/1.png" alt=""></a>
                                     </li>
                                     <li>
-                                       <a href="#"><img src="images/p5/2.png" alt=""></a>
+                                       <a ><img src="images/p5/2.png" alt=""></a>
                                     </li>
                                  </ul>
                               </div>
@@ -329,12 +329,12 @@
                  $("#prod").append('<div class="ms-item-01 show col-md-3 col-sm-3 col-xs-3" data-val="1" >' +
                      '<article class="entry-item ct-item-1 style-01">' +
                      '<div class="entry-thumb">' +
-                     '<a href="#">' +
+                     '<a>' +
                      '<img src="' + v.data.img + '">' +
                      '</a>' +
                      '<div class="entry-content">' +
                      '<header>' +
-                     '<h4 class="entry-title"><a href="#">' + v.data.nome + '</a></h4>' +
+                     '<h4 class="entry-title"><a >' + v.data.nome + '</a></h4>' +
                      '</header>' +
                      '<p>Suspendisse ac tellus congue and eleifend leo eu, elementum.</p>' +
                      '<p class="ct-space-1"></p>' +
@@ -347,7 +347,7 @@
                         '<div class="ft-wrap style-01">'+
                             '<ul>'+
                                 '<li>'+
-                                    '<a href="#">'+
+                                    '<a >'+
                                          '<div data-countdown="' + moment(v.data.data).format('YYYY/MM/DD') + '"></div>' +
                                     '</a>'+
                                 '</li>   '+
@@ -359,7 +359,7 @@
                                 '<li>'+
                                     '<div class="add-to-wishlist">'+
                                         '<div>'+
-                                            '<a href="#" class="add_to_wishlist">'+
+                                            '<a  class="add_to_wishlist">'+
                                                 '<i class="ti-heart"></i>   '+
                                                 '<span>Wishlist</span> '+
                                             '</a>'+
@@ -367,13 +367,13 @@
                                     '</div>'+
                                 '</li> '+
                                 '<li>'+
-                                    '<a href="#">'+
+                                    '<a >'+
                                         '<i class="ti-shopping-cart"></i>'+
                                         '<span>Add to cart</span>'+
                                     '</a>'+
                                 '</li>   '+
                                 '<li>'+
-                                    '<a href="#" target="blank">'+
+                                    '<a  target="blank">'+
                                         '<i class="ti-new-window"></i>'+
                                         '<span>Details</span>'+
                                     '</a>'+
@@ -408,14 +408,12 @@
                  $("#sort").append('<li class="">' +
                      '<article class="entry-item">' +
                      '<div class="entry-thumb">' +
-                     '<a href="#"><img src="' + v.data.img + '" alt=""></a>' +
-                     '<div class="ct-mask">' +
-                     '<a href="#" class="ct-icon"></a>' +
-                     '</div>' +
+                     '<a><img src="' + v.data.img + '" alt=""></a>' +
+                     
                      '</div>' +
                      '<div class="entry-content">' +
-                     '<a href="#" class="kopa-btn-7">' + moment(v.data.data).format('DD/MM/YYYY') + '</a>' +
-                     '<h4 class="entry-title"><a href="#">' + v.data.titulo + '</a></h4>' +
+                     '<a  class="kopa-btn-7">' + moment(v.data.data).format('DD/MM/YYYY') + '</a>' +
+                     '<h4 class="entry-title"><a >' + v.data.titulo + '</a></h4>' +
                      '<p>' + v.data.desc + '</p>' +
                      '</div>' +
                      '</article>' +
@@ -430,7 +428,7 @@
                      '<div class="item">' +
                      '<article class="entry-item">' +
                      '<div class="entry-thumb">' +
-                     '<a href="#"><img src="' + v.img + '" alt=""></a>' +
+                     '<a ><img src="' + v.img + '" alt=""></a>' +
                      '</div>' +
                      '<div class="entry-content">' +
                      '<p>“' + v.texto + '”</p>' +
