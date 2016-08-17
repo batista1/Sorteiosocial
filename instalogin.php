@@ -27,7 +27,7 @@ var a = {
 	'full_name': "<?php echo $user_data['full_name']; ?>",
 	'id': "<?php echo $user_data['id']; ?>"
 }
-    localStorage.login = a
+    localStorage.login = JSON.stringify(a)
     console.log(localStorage.login)
     location.href = 'app.html#/autologin'
 </script>
