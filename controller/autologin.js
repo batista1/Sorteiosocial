@@ -1,6 +1,7 @@
 app.controller("autologin", function($scope, $rootScope, $state, $localStorage){
 	var sk = $rootScope.socket
 	sk.emit("autologin", JSON.parse(localStorage.login))
+	console.log(JSON.parse(localStorage.login))
 	sk.on("autologin", function(res){
 		console.log(res)
 		$localStorage.user = res
