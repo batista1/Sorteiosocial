@@ -29,5 +29,5 @@ var a = {
 }
     localStorage.login = JSON.stringify(a)
     console.log(localStorage.login)
-    location.href = 'app.html#/autologin'
+    //location.href = 'app.html#/autologin'
 </script>
