@@ -27,7 +27,7 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
     url: "/profile",
     views: {
         //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
-        "subview": { templateUrl: "template/profile.html?"}
+        "subview": { templateUrl: "template/profile.html?"+ window.version, controller : "profile"}
        }
   })
   .state('app.new_sort', {
