@@ -23,11 +23,11 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
           "subview": { templateUrl: "template/pay.html?"+ window.version, controller : "pay"}
          }
     })
-  .state('app.home', {
-    url: "/home",
+  .state('app.profile', {
+    url: "/profile",
     views: {
         //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
-        "subview": { templateUrl: "template/home.html?"}
+        "subview": { templateUrl: "template/profile.html?"}
        }
   })
   .state('app.new_sort', {
