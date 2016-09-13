@@ -92,7 +92,7 @@ $mail->Body = '
 </style>
 
 <!-- MESSAGE SUBJECT -->
-<title>Mercado Fácil</title>
+<title>Novo Sorteio - Sorteio Social</title>
 
 </head>
 
@@ -121,7 +121,7 @@ $mail->Body = '
 
                             <!-- LOGO -->
                             <!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2. URL format: http://domain.com/?utm_source={{Campaign-Source}}&utm_medium=email&utm_content=logo&utm_campaign={{Campaign-Name}} -->
-                          <a href="http://mercadofacil.site"> <img  border="0" vspace="0" hspace="0" src="http://sorteiosocial.com/images/header/logo.png"  height="90" alt="Logo vPad" title="Logo vPad" style="
+                          <a href="http://sorteiosocial.com"> <img  border="0" vspace="0" hspace="0" src="http://sorteiosocial.com/images/header/logo.png"  height="90" alt="Logo vPad" title="Logo vPad" style="
                 color: #000000;
                 font-size: 10px; margin: 0; padding: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;" />
 </a>
@@ -332,7 +332,7 @@ $mail->Subject = 'Recuperação de senha';
 </style>
 
 <!-- MESSAGE SUBJECT -->
-<title>Mercado Fácil</title>
+<title>Sorteio Social</title>
 
 </head>
 
@@ -361,7 +361,7 @@ $mail->Subject = 'Recuperação de senha';
 
                             <!-- LOGO -->
                             <!-- Image text color should be opposite to background color. Set your url, image src, alt and title. Alt text should fit the image size. Real image size should be x2. URL format: http://domain.com/?utm_source={{Campaign-Source}}&utm_medium=email&utm_content=logo&utm_campaign={{Campaign-Name}} -->
-                           <a href="http://mercadofacil.site"> <img  border="0" vspace="0" hspace="0" src="http://vpad.com.br/src/img/new_logo_vpad.png" width="300" height="90" alt="Logo vPad" title="Logo vPad" style="
+                           <a href="http://sorteiosocial.com"> <img  border="0" vspace="0" hspace="0" src="http://vpad.com.br/src/img/new_logo_vpad.png" width="300" height="90" alt="Logo vPad" title="Logo vPad" style="
                 color: #000000;
                 font-size: 10px; margin: 0; padding: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;" />
 </a>
@@ -386,7 +386,7 @@ $mail->Subject = 'Recuperação de senha';
             padding-top: 5px;
             color: black;
             font-family: sans-serif;" class="subheader">
-                            Insira o seu token abaixo no Mercado Fácil para poder trocar sua senha.
+                            Insira o seu token abaixo no Sorteio Social para poder trocar sua senha.
                         </td>
                     </tr>
                     <!-- SUBHEADER -->
