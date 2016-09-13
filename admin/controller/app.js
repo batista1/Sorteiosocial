@@ -17,21 +17,22 @@ app.controller('Main', function(
         console.log("com token")
         $rootScope.socket = io.connect($localStorage.token.host + ":" + $localStorage.token.port)
         $rootScope.socket.emit("load_adm")
+        $rootScope.socket.on("load_adm", function(config) {
+            AWS.config.update({
+                accessKeyId: config.aws.client,
+                secretAccessKey: config.aws.secret
+            });
+            $rootScope.bucket = new AWS.S3({
+                region: 'sa-east-1',
+                params: {
+                    Bucket: 'sorteiosocial'
+                }
+            })
+        })
     }else{
         console.log("sem token")
     }
-    $rootScope.socket.on("load_adm", function(config) {
-        AWS.config.update({
-            accessKeyId: config.aws.client,
-            secretAccessKey: config.aws.secret
-        });
-        $rootScope.bucket = new AWS.S3({
-            region: 'sa-east-1',
-            params: {
-                Bucket: 'sorteiosocial'
-            }
-        })
-    })
+    
     if (!$rootScope.socket) {
         $state.go("auth")
     }
