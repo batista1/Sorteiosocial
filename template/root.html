@@ -10,11 +10,11 @@
                 </md-button>
                 <md-menu>
                     <md-button aria-label="Open phone interactions menu" class="" ng-click="$mdOpenMenu($event)">
-                        <md-icon md-svg-icon="settings" style="fill:white; color:white"></md-icon> Conta
+                        <md-icon md-svg-icon="settings" style="fill:white; color:white"></md-icon> {{user.username}}
                     </md-button>
                     <md-menu-content width="4">
                         <md-menu-item>
-                            <md-button ng-click="ctrl.redial($event)">
+                            <md-button ui-sref="app.profile">
                                 <md-icon md-svg-icon="account-outline"></md-icon>
                                 Perfil
                             </md-button>

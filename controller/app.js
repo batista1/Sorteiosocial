@@ -1,4 +1,4 @@
-var app = angular.module('Sorteio', ['ngAnimate', 'ngMaterial', 'ngMessages', 'ui.router', 'ngStorage', 'flow', 'angular-carousel','md.data.table', 'timer']);
+var app = angular.module('Sorteio', ['ngAnimate', 'ngMaterial', 'ngMessages', 'ui.router', 'ngStorage', 'flow', 'angular-carousel','md.data.table', 'timer', 'ui.utils.masks']);
 console.log("Iniciando APP!")
 
 //App principal
@@ -21,6 +21,9 @@ app.controller('Main', function(
     $rootScope.cancel = function() {$mdDialog.cancel();};
     //Variáveis
     $rootScope.socket = io.connect(window.ws)
+
+    //Carregar nome no root
+    $scope.user = $localStorage.user
 
     //Ao retornar reconectar
     $rootScope.socket.on('reconnect', function() {

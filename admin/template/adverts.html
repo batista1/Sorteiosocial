@@ -1,45 +1,5 @@
 <div layout-gt-sm="column" layout="column">
-<div layout-gt-sm="row" layout="row">
-    <md-card flex="50">
-        <section class="panel panel-box" style="height:auto;     margin-bottom: 0px;">
-            <md-toolbar class="md-table-toolbar md-primary">
-                <div class="md-toolbar-tools">
-                    <h2 class="md-title">Contagem de sorteios </h2>
-                </div>
-            </md-toolbar>
-            <div class="panel-top bg-success">
-                <div class="divider divider-xl"></div>
-                <div class="divider divider-xl"></div>
-            </div>
-            <div class="panel-icon bg-success">
-                <md-icon md-svg-icon="account-search" style="color: #fff;width:60px;height:60px;"></md-icon>
-            </div>
-            <div class="panel-bottom bg-reverse">
-                <ul class="list-justified text-center">
-                    <li>
-                        <p class="size-h2 color-info">
-                            <md-icon md-svg-icon="playlist-check" style="width:48px;height:48px;"></md-icon>
-                        </p>
-                        <p class="size-h3">{{users.length}}</p>
-                        <p class="text-muted">Cadastrados</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </md-card>
-    <md-card class="chart-container" layout="column" flex="50">
-        <md-toolbar class="md-table-toolbar md-primary">
-            <div class="md-toolbar-tools">
-                <h2 class="md-title" flex>Gráfico de evolução</h2> 
-            </div>
-        </md-toolbar>
-        <div layout-padding>
-            <div>
-                <canvas id="chart_line" height="150"></canvas>
-            </div>
-        </div>
-    </md-card>
-</div>    
+   
 <md-card>
     <md-toolbar class="md-table-toolbar md-primary">
         <div class="md-toolbar-tools">
@@ -82,6 +42,12 @@
                             <md-icon md-svg-icon="more" class="md-primary"></md-icon>
                         </md-button>
                         <md-menu-content width="4">
+                            <md-menu-item>
+                                <md-button ui-sref="app.advert({id: dessert._id})">
+                                    <md-icon md-svg-icon="account" ></md-icon>
+                                    Selecionar vencedores
+                                </md-button>
+                            </md-menu-item>
                             <md-menu-item>
                                 <md-button ng-click="popupExcluir($event, dessert._id)">
                                     <md-icon md-svg-icon="close" ></md-icon>

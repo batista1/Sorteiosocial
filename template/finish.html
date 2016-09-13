@@ -1,0 +1,28 @@
+<style type="text/css">
+	md-icon.md-default-theme, md-icon {
+    color: rgb(128, 203, 196);
+}
+h3{
+	    margin-top: 0px;
+	    font-weight: 100;
+}
+</style>
+<div layout="row" layout-align="center center" layout-padding>
+<md-card layout-padding flex layout="column" layout-align="center center" layout-fill>
+<h2 style="font-weight: 100;">{{title}}</h2>
+<md-button ng-hide="load" class="md-raised md-primary" ng-click="sortear()">Iniciar sorteio</md-button>
+<md-button ng-hide="load" class="md-raised md-primary" style="background-color:red;color:white">Excluir sorteio</md-button>
+            <h3>{{text}} <md-icon ng-show="text_c" md-svg-icon="check-circle-outline"></md-icon> </h3>
+            <h3>{{text2}} <md-icon ng-show="text2_c" md-svg-icon="check-circle-outline"></md-icon></h3>
+            <h3>{{text3}} <md-icon ng-show="text3_c" md-svg-icon="check-circle-outline"></md-icon></h3>
+            <h3>{{text4}} <md-icon ng-show="text4_c" md-svg-icon="check-circle-outline"></md-icon></h3>
+            <h3>{{text5}} <md-icon ng-show="text5_c" md-svg-icon="check-circle-outline"></md-icon></h3>
+            <h3>{{text6}} <md-icon ng-show="text6_c" md-svg-icon="check-circle-outline"></md-icon></h3>
+            <h3>{{text7}} <md-icon ng-show="text7_c" md-svg-icon="check-circle-outline"></md-icon></h3>
+            <h3 ng-hide="win">{{text8}}  <md-icon ng-show="text8_c" md-svg-icon="check-circle-outline"></md-icon></h3>
+
+
+            <h3 ng-show="win" style="font-weight: 100;">Vencedor: <a href="">@{{people}} </a> </h3>
+            <md-progress-linear ng-show="load" md-mode="indeterminate"  md-diameter="40"></md-progress-linear>
+</md-card>
+</div>

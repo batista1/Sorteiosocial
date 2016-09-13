@@ -20,7 +20,7 @@
                 <h1 style="font-size: 90px;">Ooops!</h1>
             </div>
             <div class="err-message">
-                <h2 style="font-size: 30px;">Em breve teremos sorteios aqui para você participar.</h2>
+                <h2 style="font-size: 30px;">Você ainda não criou um sorteio.</h2>
             </div>
             <div class="err-body">
                 <a ui-sref="app.new_sort" class="btn btn-lg btn-goback">
@@ -38,17 +38,16 @@
         <p class="md-title" style="font-weight: 500; text-transform: uppercase; font: 500 16px/22px 'Roboto',sans-serif;">{{c.data.titulo}}</p>
         <div layout="row">
             <div layout="column">
-                        <span class="md-caption"><md-icon md-svg-icon="calendar"></md-icon>Encerramento: {{c.data.data | date:'dd/MM/yy'}}</span>
-                        <span class="md-caption"><md-icon md-svg-icon="account"></md-icon>Anunciante: <b>@{{c.output.owner.username}}</b> </span>
-                        <span class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Tickets abertos: {{c.tickets.length}} </span>
-
+                <span class="md-caption"><md-icon md-svg-icon="calendar"></md-icon>Encerramento: {{c.data.data | date:'dd/MM/yy'}}</span>
+                <span class="md-caption"><md-icon md-svg-icon="account"></md-icon>Anunciante: <b>@{{c.output.owner.username}}</b> </span>
+                <span class="md-caption"><md-icon md-svg-icon="ticket"></md-icon>Tickets abertos: {{c.tickets.length}} </span>
             </div>
             <div layout="column">
             </div>
         </div>
     </div>
     <md-button class="md-raised" style="background-color:#03A9F4;color:white">Alterar</md-button>
-    <md-button class="md-raised" style="background-color:red;color:white">Encerrar</md-button>
+    <md-button class="md-raised" ui-sref="app.finish({id: c._id})" style="background-color:red;color:white">Encerrar</md-button>
 </md-card>
 </div>
 </div>

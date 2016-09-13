@@ -337,7 +337,6 @@ textarea {
   resize: vertical; }
 
 img {
-  max-width: 100%;
   height: auto; }
 
 input, select, button {
@@ -1927,7 +1926,8 @@ div[class*="module-slider"] .slider-pro {
   width: 100%;
   position: relative; }
   .entry-thumb img {
-    width: 100%; }
+    width: 100%;
+        height: 240px; }
   .entry-thumb .ct-mask {
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";

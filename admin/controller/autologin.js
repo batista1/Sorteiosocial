@@ -12,7 +12,7 @@ app.controller('autologin', function($scope, $rootScope, $stateParams, $state, $
 	        $mdToast.show($mdToast.simple().content("Não foi possível conectar").position('bottom right').hideDelay(2000));
 	        $scope.$apply()
 	    });  
-	    $rootScope.socket.removeListener("connect_error");
+	    $rootScope.socket.removeListener("connect");
 	    $rootScope.socket.on('connect', function() {
 	        console.log('Conectado');
 	        $mdToast.show($mdToast.simple().content("Conexão estabelecida").position('bottom right').hideDelay(2000));
@@ -29,7 +29,7 @@ app.controller('autologin', function($scope, $rootScope, $stateParams, $state, $
 	        	$scope.passform.$setPristine()
 	        	$mdToast.show($mdToast.simple().content("Chave incorreta").position('bottom right').hideDelay(2000));
 	    	}else{
-	    		$localStorage.token = {"host": $scope.data_login.host, "port": $scope.data_login.port}
+	    		$localStorage.token = {"host": $scope.data_login.host, "port": $scope.data_login.port, "key": $scope.data_login.pass}
 	    		$state.go("app.home")	    		
 	    	}
 	    })

@@ -176,7 +176,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="widget reading-module-filter-1">
+                        <div class="widget ">
                            <header class="widget-header style-01">
                               <h3 class="widget-title style-02">
                                  Produtos<span>Leilão</span>
@@ -184,10 +184,10 @@
                               <p>Use seus pontos para concorrer a leilões e ganhar produtos por um baixíssimo preço</p>
                            </header>
                            <div class="widget-content">
-                              <div class="masonry-container row" id="prod">
+                              <div class="masonry-container col-md-12 row" id="prod">
                               </div>
                               <!-- masonry-container -->
-                              <div class="text-center">
+                              <div class="text-center col-md-12"><br><br>
                                  <a class="kopa-btn-6" href="https://api.instagram.com/oauth/authorize/?client_id=df60aaef039e447dacd3c887565509b5&redirect_uri=http://www.sorteiosocial.com/instalogin.php&response_type=code">Ver todos</a>
                               </div>
                            </div>
@@ -326,6 +326,9 @@
          socket.on("fetch_prod", function(data) {
              console.log(data)
              $.each(data, function(k, v) {
+               if (!v.lances) {
+                  v.lances = 0
+               }
                  $("#prod").append('<div class="ms-item-01 show col-md-3 col-sm-3 col-xs-3" data-val="1" >' +
                      '<article class="entry-item ct-item-1 style-01">' +
                      '<div class="entry-thumb">' +

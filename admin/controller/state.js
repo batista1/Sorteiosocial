@@ -30,7 +30,7 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
     url: "/home",
     views: {
         //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
-        "root": { templateUrl: "template/home.html?"+ window.version,controller: "Main"}
+        "root": { templateUrl: "template/home.html?"+ window.version/*,controller: "Main"*/}
        }
   })
   .state('app.users', {
@@ -45,6 +45,13 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
     views: {
         //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
         "root": { templateUrl: "template/adverts.html?da"+ window.version,controller: "adverts"}
+       }
+  })
+  .state('app.advert', {
+    url: "/advert/:id",
+    views: {
+        //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
+        "root": { templateUrl: "template/advert.html?da"+ window.version,controller: "advert"}
        }
   })
   .state('app.product', {

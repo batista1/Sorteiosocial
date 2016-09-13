@@ -30,6 +30,13 @@ app.config(function($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdD
         "subview": { templateUrl: "template/profile.html?"+ window.version, controller : "profile"}
        }
   })
+  .state('app.finish', {
+    url: "/finish/:id",
+    views: {
+        //"painel": { templateUrl: "template/root/panel/panel.html?"+ window.version, controller: "painel"} ,
+        "subview": { templateUrl: "template/finish.html?"+ window.version, controller : "finish"}
+       }
+  })
   .state('app.new_sort', {
     url: "/new_sort",
     views: {
